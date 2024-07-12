@@ -1,14 +1,22 @@
 import type { Metadata } from "next";
-import { Nunito_Sans } from "next/font/google";
+import { Nunito, Nunito_Sans } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 
-const fontSans  = Nunito_Sans({ subsets: ["latin"],
-  variable: "--font-sans", });
+const fontDisplay = Nunito({
+  subsets: ["latin"],
+  variable: "--font-display",
+});
+
+const fontSans = Nunito_Sans({
+  subsets: ["latin"],
+  variable: "--font-sans",
+});
 
 export const metadata: Metadata = {
   title: "ShanBro | Best Electrical and Plumbing Services",
-  description: "Delivering best in class electrical and plumbing services at an unbeatable price!",
+  description:
+    "Delivering best in class electrical and plumbing services at an unbeatable price!",
 };
 
 export default function RootLayout({
@@ -18,10 +26,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn(
+      <body
+        className={cn(
           "min-h-screen bg-background font-sans antialiased",
-          fontSans.variable
-        )}>{children}</body>
+          fontSans.variable,
+          fontDisplay.variable
+        )}
+      >
+        {children}
+      </body>
     </html>
   );
 }
