@@ -8,7 +8,7 @@ const Navbar = () => {
         <div>
           <img src="LogoVertical.png" alt="Logo" width={96} />
         </div>
-        <div className="flex flex-col gap-1">
+        <div className="flex flex-col gap-1 sm:flex-row">
           <WhatsappButton />
           <PhoneButton />
         </div>
