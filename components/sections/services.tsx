@@ -3,9 +3,12 @@ import React from "react";
 
 const Services = () => {
   return (
-    <div className="container py-8 space-y-8">
-      <h2 className="text-[#888] font-light font-display text-xl sm:text-4xl md:text-5xl lg:text-6xl">
-        DELIVERING <br />
+    <div className="container py-16 space-y-8">
+      <h2 className="text-[#888] font-light font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
+        <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl">
+          DELIVERING
+        </span>{" "}
+        <br />
         <i>
           <strong className="text-neutral-950 font-bold">
             TOP-NOTCH SERVICES
