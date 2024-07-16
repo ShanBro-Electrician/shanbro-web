@@ -33,7 +33,7 @@ export const ReviewCard = ({ name, text }: { name: string; text: string }) => {
       <h3 className="font-bold text-xl">{name}</h3>
       <div className="flex">
         {[...Array(5)].map((_, i) => (
-          <Star stroke="0" fill="#FFC700" />
+          <Star key={i} stroke="0" fill="#FFC700" />
         ))}
       </div>
       <p className="text-sm">{text}</p>
