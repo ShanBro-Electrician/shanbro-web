@@ -21,7 +21,7 @@ const Reviews = () => {
     <div className="bg-neutral-200">
       <div className="container py-8 space-y-4">
         <div className="flex flex-col-reverse text-center font-display">
-          <h1 className="font-bold text-2xl">
+          <h1 className="font-bold text-xl md:text-4xl md:w-[30rem] md:mx-auto">
             WHAT OUR CUSTOMERS SAY ABOUT US
           </h1>
           <h2 className="text-muted-foreground">REVIEWS</h2>
