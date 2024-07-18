@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <div className="bg-black/80 relative">
+    <div className="bg-gradient-to-r from-black/90 via-black/80 to-transparent relative">
       {/* Background Image */}
       <div className="absolute top-0 bottom-0 left-0 right-0 -z-10">
         <Image
@@ -20,7 +20,7 @@ const Hero = () => {
         <h1 className="text-white font-black font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
           <span className="font-normal text-2xl">WE EXCEL IN</span>
           <br />
-          <span className="text-[#FF6CC4]">ELECTRICAL</span> <br /> &
+          <span className="text-[#FF6CC4]">ELECTRICAL</span> &<br />
           <span className="text-[#00C2FF]">PLUMBING</span>
         </h1>
         <p className="text-xs text-muted/70 max-w-96">
