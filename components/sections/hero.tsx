@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <div className="bg-gradient-to-r from-black/90 via-black/80 to-transparent relative">
+    <div className="bg-gradient-to-r from-black/95 via-black/80 to-black/25 relative">
       {/* Background Image */}
       <div className="absolute top-0 bottom-0 left-0 right-0 -z-10">
         <Image
@@ -17,11 +17,11 @@ const Hero = () => {
       </div>
       {/* Content */}
       <div className="container space-y-8 flex flex-col pt-20 pb-40 sm:pl-20">
-        <h1 className="text-white font-black font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
+        <h1 className="text-white font-semibold text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
           <span className="font-normal text-2xl">WE EXCEL IN</span>
           <br />
-          <span className="text-[#FF6CC4]">ELECTRICAL</span> &<br />
-          <span className="text-[#00C2FF]">PLUMBING</span>
+          <span>ELECTRICAL</span> &<br />
+          <span>PLUMBING</span>
         </h1>
         <p className="text-xs text-muted/70 max-w-96">
           At ShanBro, we’ve been serving customers with high quality repairs,
