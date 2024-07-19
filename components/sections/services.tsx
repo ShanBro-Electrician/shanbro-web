@@ -1,27 +1,47 @@
 import Image from "next/image";
 import React from "react";
+import { Separator } from "../ui/separator";
+
+const details = [
+  {
+    title: "Expert Craftsmanship",
+    description:
+      "Our team of skilled technicians brings years of experience to every job. Whether it’s electrical repairs or plumbing installations, we deliver top-notch workmanship.",
+  },
+  {
+    title: "Transparent Pricing",
+    description:
+      "At ShanBro, we believe in honest, upfront pricing. No surprises here! You’ll know exactly what to expect before we start any project.",
+  },
+  {
+    title: "Prompt Response",
+    description:
+      "Emergencies happen, and when they do, we’re there for you. Our rapid response time ensures your safety and peace of mind.",
+  },
+  {
+    title: "Customer-Centric Approach",
+    description:
+      "Your satisfaction is our priority. We listen to your needs, provide tailored solutions, and ensure you’re delighted with our services.",
+  },
+  {
+    title: "Reliable and Trustworthy",
+    description:
+      "Our track record speaks for itself. Customers trust us because we consistently deliver quality work and build lasting relationships.",
+  },
+];
 
 const Services = () => {
   return (
-    <div className="container py-16 space-y-8">
-      <h2 className="text-[#888] font-light font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
-        <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl">
-          DELIVERING
-        </span>{" "}
-        <br />
-        <i>
-          <strong className="text-neutral-950 font-bold">
-            TOP-NOTCH SERVICES
-          </strong>{" "}
-          <br />
-          AT{" "}
-          <strong className="text-neutral-950 font-bold">
-            UNBEATABLE PRICES.
-          </strong>
-        </i>
+    <div className="container py-20 space-y-16 overflow-hidden">
+      <h2 className="font-normal text-neutral-400 leading-none antialiased uppercase text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
+        Delivering <br />
+        <span className="text-neutral-800">
+          top-notch services <br />
+          <span className="text-neutral-400">at</span> unbeatable prices.
+        </span>
       </h2>
-      <div className="flex gap-2 ml-auto h-48 max-w-96 sm:max-w-none sm:w-2/3 md:h-60 md:gap-4 lg:gap-6 lg:h-[28rem]">
-        <div className="relative w-full mt-4 mb-8 md:mb-16 md:mt-12">
+      <div className="flex justify-between gap-2 -mx-32 h-48">
+        <div className="relative w-full h-full">
           <Image
             src="/services1.jpg"
             alt="man working"
@@ -29,7 +49,7 @@ const Services = () => {
             className="object-cover"
           />
         </div>
-        <div className="relative w-full mt-2 mb-4 md:mb-8 md:mt-6">
+        <div className="relative w-full h-full">
           <Image
             src="/services2.jpg"
             alt="man working"
@@ -37,7 +57,7 @@ const Services = () => {
             className="object-cover"
           />
         </div>
-        <div className="relative w-full">
+        <div className="relative w-full h-full">
           <Image
             src="/services3.jpg"
             alt="man working"
@@ -45,7 +65,44 @@ const Services = () => {
             className="object-cover"
           />
         </div>
+        <div className="relative w-full h-full">
+          <Image
+            src="/services1.jpg"
+            alt="man working"
+            fill
+            className="object-cover"
+          />
+        </div>
       </div>
+
+      <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:justify-center">
+        {details.map((d) => (
+          <div className="space-y-1 sm:w-60" key={d.title}>
+            <h3 className="text-xs font-semibold">{d.title}</h3>
+            <p className="text-xs text-muted-foreground leading-normal">
+              {d.description}
+            </p>
+          </div>
+        ))}
+      </div>
+
+      <Separator />
+
+      <h3 className="font-medium text-neutral-400 text-xl leading-none antialiased uppercase max-w-[900px] mx-auto">
+        Upgrade your{" "}
+        <span className="text-neutral-800">House, Shop, or Office</span>
+        <br />
+        with our complete{" "}
+        <span className="text-neutral-800">
+          Renovation, Electrical, and Plumbing services
+        </span>
+        <br />
+        covering{" "}
+        <span className="text-neutral-800">
+          water heaters, ceiling fans, air conditioners, lighting, CCTV, power
+          sockets, main db fuse boxes, and a lot more!
+        </span>
+      </h3>
     </div>
   );
 };
