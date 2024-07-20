@@ -3,10 +3,11 @@ import WhatsappButton from "./whatsapp-button";
 
 const Navbar = () => {
   return (
-    <div className="sticky top-0 z-50">
-      <div className="bg-[#4260FF] px-5 py-2 flex justify-between items-center">
-        <div>
-          <img src="LogoVertical.png" alt="Logo" width={96} />
+    <div className="z-50 fixed top-0 right-0 left-0 sm:py-2 sm:px-4">
+      <div className="bg-gradient-to-r from-lime-500 to-lime-600 container flex justify-between py-2 sm:rounded-full sm:p-2 sm:pl-4">
+        <div className="flex flex-col items-center gap-2 sm:flex-row">
+          <img src="Logo.png" alt="Logo" className="w-10" />
+          <img src="LogoText.png" alt="Logo" className="w-20" />
         </div>
         <div className="flex flex-col gap-1 sm:flex-row">
           <WhatsappButton />
