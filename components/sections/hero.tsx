@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <div className="bg-black/70 relative rounded-b-3xl sm:rounded-b-[50px] overflow-hidden">
+    <div className="bg-black/70 relative rounded-b-3xl sm:rounded-b-[80px] overflow-hidden">
       {/* Background Image */}
       <div className="absolute top-0 bottom-0 left-0 right-0 -z-10 blur-sm">
         <Image
