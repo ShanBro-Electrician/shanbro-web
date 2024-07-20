@@ -33,11 +33,11 @@ const details = [
 const Services = () => {
   return (
     <div className="container py-20 space-y-16 overflow-hidden">
-      <h2 className="font-normal text-lime-700/40 leading-none antialiased uppercase text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
+      <h2 className="font-normal text-lime-700/50 leading-none antialiased uppercase text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
         Delivering <br />
         <span className="text-lime-800">
           top-notch services <br />
-          <span className="text-lime-700/40">at</span> unbeatable prices.
+          <span className="text-lime-700/50">at</span> unbeatable prices.
         </span>
       </h2>
       <div className="flex justify-between gap-2 -mx-32 h-48">
@@ -88,7 +88,7 @@ const Services = () => {
 
       <Separator />
 
-      <h3 className="font-medium text-lime-700/40 text-xl leading-none antialiased uppercase max-w-[900px] mx-auto">
+      <h3 className="font-medium text-lime-700/50 text-xl leading-none antialiased uppercase max-w-[900px] mx-auto">
         Upgrade your{" "}
         <span className="text-lime-800">House, Shop, or Office</span>
         <br />
