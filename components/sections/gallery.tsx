@@ -19,16 +19,26 @@ const images = [
 
 const Gallery = () => {
   return (
-    <div className="container py-8">
-      <h1 className="font-bold text-2xl md:text-4xl lg:text-5xl mb-2 md:mb-4">
-        Gallery
-      </h1>
-      <div className="grid gap-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-        {images.map((img) => (
-          <div key={img.src} className="relative h-32 sm:h-48 md:h-72 lg:h-96">
-            <Image src={img.src} alt={img.alt} fill className="object-cover" />
-          </div>
-        ))}
+    <div className="bg-neutral-950">
+      <div className="container py-8">
+        <h1 className="text-xl text-neutral-100 font-normal leading-none md:text-4xl  md:mx-auto mb-4">
+          GALLERY
+        </h1>
+        <div className="grid gap-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          {images.map((img) => (
+            <div
+              key={img.src}
+              className="relative h-32 sm:h-48 md:h-72 lg:h-96"
+            >
+              <Image
+                src={img.src}
+                alt={img.alt}
+                fill
+                className="object-cover"
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
