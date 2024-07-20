@@ -8,7 +8,7 @@ export default function Home() {
     <main>
       <Hero />
       <Services />
-      <div className="bg-stone-950">
+      <div className="bg-stone-950 rounded-t-3xl sm:rounded-t-[80px]">
         <Reviews />
         <Gallery />
       </div>
