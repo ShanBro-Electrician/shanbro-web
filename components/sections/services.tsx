@@ -33,11 +33,11 @@ const details = [
 const Services = () => {
   return (
     <div className="container py-20 space-y-16 overflow-hidden">
-      <h2 className="font-normal text-neutral-400 leading-none antialiased uppercase text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
+      <h2 className="font-normal text-lime-700/40 leading-none antialiased uppercase text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
         Delivering <br />
-        <span className="text-neutral-800">
+        <span className="text-lime-800">
           top-notch services <br />
-          <span className="text-neutral-400">at</span> unbeatable prices.
+          <span className="text-lime-700/40">at</span> unbeatable prices.
         </span>
       </h2>
       <div className="flex justify-between gap-2 -mx-32 h-48">
@@ -78,7 +78,7 @@ const Services = () => {
       <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:justify-center">
         {details.map((d) => (
           <div className="space-y-1 sm:w-60" key={d.title}>
-            <h3 className="text-xs font-semibold">{d.title}</h3>
+            <h3 className="text-sm font-semibold text-lime-800">{d.title}</h3>
             <p className="text-xs text-muted-foreground leading-normal">
               {d.description}
             </p>
@@ -88,17 +88,17 @@ const Services = () => {
 
       <Separator />
 
-      <h3 className="font-medium text-neutral-400 text-xl leading-none antialiased uppercase max-w-[900px] mx-auto">
+      <h3 className="font-medium text-lime-700/40 text-xl leading-none antialiased uppercase max-w-[900px] mx-auto">
         Upgrade your{" "}
-        <span className="text-neutral-800">House, Shop, or Office</span>
+        <span className="text-lime-800">House, Shop, or Office</span>
         <br />
         with our complete{" "}
-        <span className="text-neutral-800">
+        <span className="text-lime-800">
           Renovation, Electrical, and Plumbing services
         </span>
         <br />
         covering{" "}
-        <span className="text-neutral-800">
+        <span className="text-lime-800">
           water heaters, ceiling fans, air conditioners, lighting, CCTV, power
           sockets, main db fuse boxes, and a lot more!
         </span>
