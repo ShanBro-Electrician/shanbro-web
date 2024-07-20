@@ -8,8 +8,10 @@ export default function Home() {
     <main>
       <Hero />
       <Services />
-      <Reviews />
-      <Gallery />
+      <div className="bg-stone-950">
+        <Reviews />
+        <Gallery />
+      </div>
     </main>
   );
 }

@@ -18,31 +18,29 @@ const reviews = [
 
 const Reviews = () => {
   return (
-    <div className="bg-neutral-950">
-      <div className="container py-20 space-y-4">
-        <div className="flex flex-col-reverse text-center">
-          <h1 className="text-xl text-neutral-100 font-semibold leading-none md:text-3xl md:w-[30rem] md:mx-auto">
-            WHAT OUR CUSTOMERS SAY ABOUT US
-          </h1>
-          <h2 className="text-muted-foreground">REVIEWS</h2>
-        </div>
-        <div className="space-y-2 md:space-y-0 md:grid md:grid-cols-4 md:gap-8 md:items-end md:py-8 md:px-10 lg:px-20 2xl:px-48">
-          <ReviewCard
-            name={reviews[0].name}
-            text={reviews[0].text}
-            className="col-span-2"
-          />
-          <ReviewCard
-            name={reviews[1].name}
-            text={reviews[1].text}
-            className="col-span-2 md:h-max"
-          />
-          <ReviewCard
-            name={reviews[2].name}
-            text={reviews[2].text}
-            className="col-start-2 col-span-2"
-          />
-        </div>
+    <div className="container py-20 space-y-4">
+      <div className="flex flex-col-reverse text-center">
+        <h1 className="text-xl text-neutral-100 font-semibold leading-none md:text-3xl md:w-[30rem] md:mx-auto">
+          WHAT OUR CUSTOMERS SAY ABOUT US
+        </h1>
+        <h2 className="text-muted-foreground">REVIEWS</h2>
+      </div>
+      <div className="space-y-2 md:space-y-0 md:grid md:grid-cols-4 md:gap-8 md:items-end md:py-8 md:px-10 lg:px-20 2xl:px-48">
+        <ReviewCard
+          name={reviews[0].name}
+          text={reviews[0].text}
+          className="col-span-2"
+        />
+        <ReviewCard
+          name={reviews[1].name}
+          text={reviews[1].text}
+          className="col-span-2 md:h-max"
+        />
+        <ReviewCard
+          name={reviews[2].name}
+          text={reviews[2].text}
+          className="col-start-2 col-span-2"
+        />
       </div>
     </div>
   );
