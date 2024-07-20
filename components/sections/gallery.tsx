@@ -20,7 +20,7 @@ const images = [
 const Gallery = () => {
   return (
     <div className="container py-8">
-      <h1 className="text-xl text-neutral-100 font-normal leading-none md:text-4xl  md:mx-auto mb-4">
+      <h1 className="text-xl md:text-3xl text-lime-200 font-semibold mb-2">
         GALLERY
       </h1>
       <div className="grid gap-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
