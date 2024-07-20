@@ -2,6 +2,7 @@ import Hero from "@/components/sections/hero";
 import Services from "@/components/sections/services";
 import Reviews from "@/components/sections/reviews";
 import Gallery from "@/components/sections/gallery";
+import Footer from "@/components/sections/footer";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
         <Reviews />
         <Gallery />
       </div>
+      <Footer />
     </main>
   );
 }
