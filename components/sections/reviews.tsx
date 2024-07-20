@@ -19,8 +19,8 @@ const reviews = [
 const Reviews = () => {
   return (
     <div className="container py-20 space-y-4">
-      <div className="flex flex-col-reverse text-center">
-        <h1 className="text-xl text-neutral-100 font-semibold leading-none md:text-3xl md:w-[30rem] md:mx-auto">
+      <div className="flex flex-col-reverse text-center gap-2">
+        <h1 className="text-xl text-lime-200 font-semibold leading-none md:text-3xl md:w-[30rem] md:mx-auto">
           WHAT OUR CUSTOMERS SAY ABOUT US
         </h1>
         <h2 className="text-muted-foreground">REVIEWS</h2>
@@ -58,7 +58,7 @@ export const ReviewCard = ({
   ...rest
 }: ReviewCardProps) => {
   return (
-    <div className={cn("bg-neutral-900 p-4 space-y-1", className)} {...rest}>
+    <div className={cn("bg-stone-900 p-4 space-y-1", className)} {...rest}>
       <h3 className="text-xs font-semibold text-neutral-200">{name}</h3>
       <div className="flex">
         {[...Array(5)].map((_, i) => (
