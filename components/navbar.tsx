@@ -4,7 +4,7 @@ import WhatsappButton from "./whatsapp-button";
 const Navbar = () => {
   return (
     <div className="z-50 fixed top-0 right-0 left-0 sm:py-2 sm:px-4">
-      <div className="bg-gradient-to-r from-lime-500 to-lime-600 container flex justify-between py-2 sm:rounded-full sm:p-2 sm:pl-4">
+      <div className="bg-gradient-to-r from-lime-300 to-lime-500 container flex justify-between py-2 sm:rounded-full sm:p-2 sm:pl-4">
         <div className="flex flex-col items-center gap-2 sm:flex-row">
           <img src="Logo.png" alt="Logo" className="w-10" />
           <img src="LogoText.png" alt="Logo" className="w-20" />
