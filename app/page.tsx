@@ -12,8 +12,10 @@ export default function Home() {
       <div className="bg-stone-950 rounded-t-3xl sm:rounded-t-[80px]">
         <Reviews />
         <Gallery />
+        <div className="bg-lime-500 rounded-t-3xl sm:rounded-t-[80px]">
+          <Footer />
+        </div>
       </div>
-      <Footer />
     </main>
   );
 }
