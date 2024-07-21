@@ -9,7 +9,7 @@ export default function Home() {
     <main>
       <Hero />
       <Services />
-      <div className="bg-stone-950 rounded-t-3xl sm:rounded-t-[80px]">
+      <div className="bg-gradient-to-br from-stone-900 to-black rounded-t-3xl sm:rounded-t-[80px]">
         <Reviews />
         <Gallery />
         <div className="p-4">
