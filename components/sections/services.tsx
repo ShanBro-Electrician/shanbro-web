@@ -67,8 +67,8 @@ const Services = () => {
         </div>
         <div className="relative w-full h-full">
           <Image
-            src="/services1.jpg"
-            alt="man working"
+            src="/services4.jpg"
+            alt="Electrical works"
             fill
             className="object-cover"
           />
