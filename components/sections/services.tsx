@@ -26,7 +26,7 @@ const Services = () => {
     hidden: { opacity: 0 },
   };
 
-  const primaryTextStyle = "text-lime-800";
+  const primaryTextStyle = "text-lime-900";
   const mutedTextStyle = "text-lime-800/40";
 
   return (
@@ -35,7 +35,7 @@ const Services = () => {
         variants={containerVariant}
         initial="hidden"
         whileInView="visible"
-        className="leading-none antialiased uppercase text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
+        className="leading-none antialiased uppercase font-medium text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
       >
         <motion.span className={mutedTextStyle} variants={wordVariant}>
           Delivering
