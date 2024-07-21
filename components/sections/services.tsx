@@ -23,7 +23,7 @@ const Services = () => {
 
   const wordVariant = {
     visible: { opacity: 1 },
-    hidden: { opacity: 0 },
+    hidden: { opacity: 0.2 },
   };
 
   const primaryTextStyle = "text-lime-900";
