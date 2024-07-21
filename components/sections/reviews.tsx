@@ -1,31 +1,55 @@
 import { cn } from "@/lib/utils";
 import { Star } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 const Reviews = () => {
+  const motionVariants: Variants = {
+    hidden: {
+      opacity: 0,
+      y: 30,
+      scaleY: 1.5,
+      transformOrigin: "top",
+      filter: "blur(5px)",
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scaleY: 1,
+      transformOrigin: "top",
+      filter: "blur(0)",
+      transition: { duration: 0.3 },
+    },
+  };
+
   return (
     <div className="container py-20 space-y-4">
       <div className="flex flex-col-reverse text-center gap-2">
         <motion.h1
-          initial={{ opacity: 0, y: 20, filter: "blur(5px)" }}
-          transition={{ duration: 0.3 }}
-          whileInView={{ opacity: 1, y: 0, filter: "blur(0)" }}
           viewport={{ margin: "-80px" }}
+          variants={motionVariants}
+          initial="hidden"
+          whileInView="visible"
           className="text-xl text-lime-100 font-semibold leading-none md:text-3xl md:w-[30rem] md:mx-auto"
         >
           WHAT OUR CUSTOMERS SAY ABOUT US
         </motion.h1>
         <motion.h2
-          initial={{ opacity: 0, y: 20, filter: "blur(5px)" }}
-          transition={{ duration: 0.4 }}
-          whileInView={{ opacity: 1, y: 0, filter: "blur(0)" }}
           viewport={{ margin: "-80px" }}
+          variants={motionVariants}
+          initial="hidden"
+          whileInView="visible"
           className="text-muted-foreground"
         >
           REVIEWS
         </motion.h2>
       </div>
-      <div className="space-y-2 md:space-y-0 md:grid md:grid-cols-4 md:gap-8 md:items-end md:py-8 md:px-10 lg:px-20 2xl:px-48">
+      <motion.div
+        viewport={{ margin: "-80px" }}
+        variants={motionVariants}
+        initial="hidden"
+        whileInView="visible"
+        className="space-y-2 md:space-y-0 md:grid md:grid-cols-4 md:gap-8 md:items-end md:py-8 md:px-10 lg:px-20 2xl:px-48"
+      >
         <ReviewCard
           name={reviews[0].name}
           text={reviews[0].text}
@@ -41,7 +65,7 @@ const Reviews = () => {
           text={reviews[2].text}
           className="col-start-2 col-span-2"
         />
-      </div>
+      </motion.div>
     </div>
   );
 };
@@ -51,12 +75,7 @@ interface ReviewCardProps extends React.ComponentPropsWithoutRef<"div"> {
   text: string;
 }
 
-export const ReviewCard = ({
-  name,
-  text,
-  className,
-  ...rest
-}: ReviewCardProps) => {
+const ReviewCard = ({ name, text, className, ...rest }: ReviewCardProps) => {
   return (
     <div className={cn("bg-stone-900 p-4 space-y-1", className)} {...rest}>
       <h3 className="text-xs font-semibold text-neutral-200">{name}</h3>
