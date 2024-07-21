@@ -14,7 +14,7 @@ export default function Home() {
       <motion.div
         // rounded-t-3xl sm:rounded-t-[80px]
         className="bg-gradient-to-br from-stone-900 to-black"
-        initial={{ borderTopLeftRadius: 200, borderTopRightRadius: 200 }}
+        initial={{ borderTopLeftRadius: 300, borderTopRightRadius: 300 }}
         whileInView={{ borderTopLeftRadius: 40, borderTopRightRadius: 40 }}
         viewport={{ margin: "-80px" }}
       >
