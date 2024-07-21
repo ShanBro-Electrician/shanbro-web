@@ -2,34 +2,6 @@ import Image from "next/image";
 import React from "react";
 import { Separator } from "../ui/separator";
 
-const details = [
-  {
-    title: "Expert Craftsmanship",
-    description:
-      "Our team of skilled technicians brings years of experience to every job. Whether it’s electrical repairs or plumbing installations, we deliver top-notch workmanship.",
-  },
-  {
-    title: "Transparent Pricing",
-    description:
-      "At ShanBro, we believe in honest, upfront pricing. No surprises here! You’ll know exactly what to expect before we start any project.",
-  },
-  {
-    title: "Prompt Response",
-    description:
-      "Emergencies happen, and when they do, we’re there for you. Our rapid response time ensures your safety and peace of mind.",
-  },
-  {
-    title: "Customer-Centric Approach",
-    description:
-      "Your satisfaction is our priority. We listen to your needs, provide tailored solutions, and ensure you’re delighted with our services.",
-  },
-  {
-    title: "Reliable and Trustworthy",
-    description:
-      "Our track record speaks for itself. Customers trust us because we consistently deliver quality work and build lasting relationships.",
-  },
-];
-
 const Services = () => {
   return (
     <div className="container py-20 space-y-16 overflow-hidden">
@@ -106,5 +78,33 @@ const Services = () => {
     </div>
   );
 };
+
+const details = [
+  {
+    title: "Expert Craftsmanship",
+    description:
+      "Our team of skilled technicians brings years of experience to every job. Whether it’s electrical repairs or plumbing installations, we deliver top-notch workmanship.",
+  },
+  {
+    title: "Transparent Pricing",
+    description:
+      "At ShanBro, we believe in honest, upfront pricing. No surprises here! You’ll know exactly what to expect before we start any project.",
+  },
+  {
+    title: "Prompt Response",
+    description:
+      "Emergencies happen, and when they do, we’re there for you. Our rapid response time ensures your safety and peace of mind.",
+  },
+  {
+    title: "Customer-Centric Approach",
+    description:
+      "Your satisfaction is our priority. We listen to your needs, provide tailored solutions, and ensure you’re delighted with our services.",
+  },
+  {
+    title: "Reliable and Trustworthy",
+    description:
+      "Our track record speaks for itself. Customers trust us because we consistently deliver quality work and build lasting relationships.",
+  },
+];
 
 export default Services;
