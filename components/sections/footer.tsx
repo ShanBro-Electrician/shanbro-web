@@ -3,7 +3,7 @@ import WhatsappButton from "../whatsapp-button";
 
 const Footer = () => {
   return (
-    <div className="container py-8 flex flex-col gap-4 sm:flex-row sm:justify-between sm:items-center bg-gradient-to-r from-lime-500 to-lime-600 rounded-3xl">
+    <div className="container py-8 flex flex-col gap-4 sm:flex-row sm:justify-between sm:items-center bg-gradient-to-r from-lime-400 to-lime-500 rounded-3xl">
       <div className="space-y-2">
         <div className="flex flex-col items-center gap-2 sm:flex-row">
           <img src="Logo.png" alt="Logo" className="w-10" />

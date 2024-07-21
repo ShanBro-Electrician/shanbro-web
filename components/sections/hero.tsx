@@ -17,7 +17,7 @@ const Hero = () => {
       </div>
       {/* Content */}
       <div className="container space-y-8 flex flex-col py-40 sm:pl-20">
-        <h1 className="text-lime-300 font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
+        <h1 className="text-lime-200 font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
           <span className="font-normal text-lg text-neutral-300">
             WE EXCEL IN
           </span>
