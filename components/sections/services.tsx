@@ -1,17 +1,71 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 import { Separator } from "../ui/separator";
+import { motion } from "framer-motion";
 
 const Services = () => {
+  const containerVariant = {
+    visible: {
+      opacity: 1,
+      transition: {
+        when: "beforeChildren",
+        staggerChildren: 0.2,
+      },
+    },
+    hidden: {
+      opacity: 0,
+      transition: {
+        when: "afterChildren",
+      },
+    },
+  };
+
+  const wordVariant = {
+    visible: { opacity: 1 },
+    hidden: { opacity: 0 },
+  };
+
+  const primaryTextStyle = "text-lime-800";
+  const mutedTextStyle = "text-lime-800/40";
+
   return (
     <div className="container py-20 space-y-16 overflow-hidden">
-      <h2 className="font-normal text-lime-800/40 leading-none antialiased uppercase text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
+      <motion.h2
+        variants={containerVariant}
+        initial="hidden"
+        whileInView="visible"
+        className="leading-none antialiased uppercase text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
+      >
+        <motion.span className={mutedTextStyle} variants={wordVariant}>
+          Delivering
+        </motion.span>
+        <br />
+        <motion.span className={primaryTextStyle} variants={wordVariant}>
+          top-notch
+        </motion.span>{" "}
+        <motion.span className={primaryTextStyle} variants={wordVariant}>
+          services
+        </motion.span>
+        <br />
+        <motion.span className={mutedTextStyle} variants={wordVariant}>
+          at
+        </motion.span>{" "}
+        <motion.span className={primaryTextStyle} variants={wordVariant}>
+          unbeatable
+        </motion.span>{" "}
+        <motion.span className={primaryTextStyle} variants={wordVariant}>
+          prices.
+        </motion.span>
+      </motion.h2>
+
+      {/* <h2 className="font-normal text-lime-800/40 leading-none antialiased uppercase text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
         Delivering <br />
         <span className="text-lime-800">
           top-notch services <br />
           <span className="text-lime-800/40">at</span> unbeatable prices.
         </span>
-      </h2>
+      </h2> */}
       <div className="flex justify-between gap-2 -mx-32 h-48">
         <div className="relative w-full h-full">
           <Image
@@ -60,7 +114,86 @@ const Services = () => {
 
       <Separator />
 
-      <h3 className="font-medium text-lime-800/40 text-xl leading-none antialiased uppercase max-w-[900px] mx-auto">
+      <motion.h3
+        className="font-medium text-xl leading-none antialiased uppercase max-w-[900px] mx-auto"
+        variants={containerVariant}
+        initial="hidden"
+        whileInView="visible"
+      >
+        <motion.span className={mutedTextStyle} variants={wordVariant}>
+          Upgrade
+        </motion.span>{" "}
+        <motion.span className={mutedTextStyle} variants={wordVariant}>
+          your
+        </motion.span>{" "}
+        <motion.span className={primaryTextStyle} variants={wordVariant}>
+          House,
+        </motion.span>{" "}
+        <motion.span className={primaryTextStyle} variants={wordVariant}>
+          Shop,
+        </motion.span>{" "}
+        <motion.span className={primaryTextStyle} variants={wordVariant}>
+          or
+        </motion.span>{" "}
+        <motion.span className={primaryTextStyle} variants={wordVariant}>
+          Office
+        </motion.span>{" "}
+        <br />
+        <motion.span className={mutedTextStyle} variants={wordVariant}>
+          with
+        </motion.span>{" "}
+        <motion.span className={mutedTextStyle} variants={wordVariant}>
+          our
+        </motion.span>{" "}
+        <motion.span className={mutedTextStyle} variants={wordVariant}>
+          complete
+        </motion.span>{" "}
+        <motion.span className={primaryTextStyle} variants={wordVariant}>
+          Renovation,
+        </motion.span>{" "}
+        <motion.span className={primaryTextStyle} variants={wordVariant}>
+          Electrical,
+        </motion.span>{" "}
+        <motion.span className={primaryTextStyle} variants={wordVariant}>
+          and
+        </motion.span>{" "}
+        <motion.span className={primaryTextStyle} variants={wordVariant}>
+          Plumbing
+        </motion.span>{" "}
+        <motion.span className={primaryTextStyle} variants={wordVariant}>
+          Services
+        </motion.span>{" "}
+        <br />
+        <motion.span className={mutedTextStyle} variants={wordVariant}>
+          covering
+        </motion.span>{" "}
+        <motion.span className={primaryTextStyle} variants={wordVariant}>
+          Water Heaters,
+        </motion.span>{" "}
+        <motion.span className={primaryTextStyle} variants={wordVariant}>
+          Ceiling Fans,
+        </motion.span>{" "}
+        <motion.span className={primaryTextStyle} variants={wordVariant}>
+          Air Conditioners,
+        </motion.span>{" "}
+        <motion.span className={primaryTextStyle} variants={wordVariant}>
+          Lighting,
+        </motion.span>{" "}
+        <motion.span className={primaryTextStyle} variants={wordVariant}>
+          CCTV,
+        </motion.span>{" "}
+        <motion.span className={primaryTextStyle} variants={wordVariant}>
+          Power Sockets,
+        </motion.span>{" "}
+        <motion.span className={primaryTextStyle} variants={wordVariant}>
+          Main DB Fuse Boxes,
+        </motion.span>{" "}
+        <motion.span className={primaryTextStyle} variants={wordVariant}>
+          and a lot more!
+        </motion.span>{" "}
+      </motion.h3>
+
+      {/* <h3 className="font-medium text-lime-800/40 text-xl leading-none antialiased uppercase max-w-[900px] mx-auto">
         Upgrade your{" "}
         <span className="text-lime-800">House, Shop, or Office</span>
         <br />
@@ -74,7 +207,7 @@ const Services = () => {
           water heaters, ceiling fans, air conditioners, lighting, CCTV, power
           sockets, main db fuse boxes, and a lot more!
         </span>
-      </h3>
+      </h3> */}
     </div>
   );
 };
