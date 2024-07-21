@@ -1,15 +1,10 @@
 import type { Metadata } from "next";
-import { Nunito, Inter as Nunito_Sans } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/navbar";
 
-const fontDisplay = Nunito({
-  subsets: ["latin"],
-  variable: "--font-display",
-});
-
-const fontSans = Nunito_Sans({
+const fontSans = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
 });
@@ -30,8 +25,7 @@ export default function RootLayout({
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased",
-          fontSans.variable,
-          fontDisplay.variable
+          fontSans.variable
         )}
       >
         <Navbar />
