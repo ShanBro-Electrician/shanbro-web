@@ -64,14 +64,14 @@ const Hero = () => {
       >
         <motion.h1
           variants={itemVariants}
-          className="text-lime-200 font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl"
+          className="text-lime-200 uppercase font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl"
         >
           <span className="font-normal text-lg text-neutral-300">
-            WE EXCEL IN
+            We excel in
           </span>
           <br />
-          <span>ELECTRICAL</span> &<br />
-          <span>PLUMBING</span>
+          <span>Electrical</span> &<br />
+          <span>Plumbing</span>
         </motion.h1>
         <motion.p
           variants={itemVariants}

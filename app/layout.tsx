@@ -10,7 +10,8 @@ const fontSans = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "ShanBro | Best Electrical and Plumbing Services",
+  title:
+    "ShanBro | Best Electrical and Plumbing Services in Kuala Lumpur City.",
   description:
     "Delivering best in class electrical and plumbing services at an unbeatable price!",
 };
