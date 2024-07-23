@@ -37,7 +37,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="bg-black/70 relative overflow-hidden h-screen md:h-auto">
+    <div className="bg-stone-900/50 relative overflow-hidden h-screen md:h-auto">
       {/* Background Image */}
       <motion.div
         initial={{ scale: 1.5, y: 100, rotate: 10 }}
@@ -75,7 +75,7 @@ const Hero = () => {
         </motion.h1>
         <motion.p
           variants={itemVariants}
-          className="text-xs text-neutral-300 max-w-96"
+          className="text-sm text-neutral-300 max-w-96"
         >
           At ShanBro, we’ve been serving customers with high quality repairs,
           installations, and emergency services. With transparent pricing and a
