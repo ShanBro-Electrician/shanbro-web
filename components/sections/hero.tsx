@@ -53,7 +53,7 @@ const Hero = () => {
         <Separator className="sm:col-span-2 lg:col-span-3 bg-lime-100/30" />
         <div className="space-y-4">
           <h2 className="leading-none uppercase font-semibold text-lime-100 sm:text-lg md:text-xl lg:text-2xl xl:text-3xl">
-            We're only <br /> one call away
+            We&apos;re only <br /> one call away
           </h2>
           <div className="flex gap-2">
             <WhatsappButton />
@@ -61,10 +61,11 @@ const Hero = () => {
           </div>
         </div>
         <p className="text-sm text-lime-100">
-          At ShanBro, we’ve been serving customers with high quality repairs,
-          installations, and emergency services. With transparent pricing and a
-          commitment to safety, we’re your trusted partner for all your
-          electrical and plumbing needs. Contact us today for a free quote!
+          At ShanBro, we&apos;ve been serving customers with high quality
+          repairs, installations, and emergency services. With transparent
+          pricing and a commitment to safety, we&apos;re your trusted partner
+          for all your electrical and plumbing needs. Contact us today for a
+          free quote!
         </p>
         {/* <div className="flex items-center justify-center relative sm:col-start-2 lg:col-start-3">
           <Cog className="absolute w-48 h-48 sm:w-72 sm:h-72 lg:w-96 lg:h-96 -top-2 text-stone-300" />
