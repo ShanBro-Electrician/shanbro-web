@@ -116,13 +116,13 @@ const ScrollAnimatedCog = () => {
   const { scrollY } = useScroll();
   const rotate = useSpring(
     useTransform(scrollY, [0, 1000], [0, 360], { clamp: false }),
-    { bounce: 0 }
+    { bounce: 0, duration: 1 }
   );
   const rotateAnti = useSpring(
     useTransform(scrollY, [0, 1000], [360, 0], {
       clamp: false,
     }),
-    { bounce: 0 }
+    { bounce: 0, duration: 1 }
   );
   return (
     <div className="relative h-72 w-72">
