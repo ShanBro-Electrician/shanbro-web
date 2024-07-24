@@ -115,12 +115,14 @@ const Services = () => {
 const ScrollAnimatedCog = () => {
   const { scrollY } = useScroll();
   const rotate = useSpring(
-    useTransform(scrollY, [0, 1000], [0, 360], { clamp: false })
+    useTransform(scrollY, [0, 1000], [0, 360], { clamp: false }),
+    { bounce: 0 }
   );
   const rotateAnti = useSpring(
     useTransform(scrollY, [0, 1000], [360, 0], {
       clamp: false,
-    })
+    }),
+    { bounce: 0 }
   );
   return (
     <div className="relative h-72 w-72">
@@ -128,19 +130,19 @@ const ScrollAnimatedCog = () => {
         style={{ rotate }}
         className="absolute w-24 h-auto top-0 right-14"
       >
-        <Cog className="w-full h-full text-stone-300" />
+        <Cog className="w-full h-full text-stone-200" />
       </motion.div>
       <motion.div
         style={{ rotate }}
         className="absolute w-36 h-auto bottom-0 right-0"
       >
-        <Cog className="w-full h-full text-stone-300" />
+        <Cog className="w-full h-full text-stone-200" />
       </motion.div>
       <motion.div
         style={{ rotate: rotateAnti }}
         className="absolute w-48 h-auto top-10 left-0"
       >
-        <Cog className="w-full h-full text-stone-300" />
+        <Cog className="w-full h-full text-stone-200" />
       </motion.div>
 
       {/* <MotionCog
