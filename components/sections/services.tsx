@@ -26,8 +26,8 @@ const Services = () => {
     hidden: { opacity: 0.05 },
   };
 
-  const primaryTextStyle = "text-lime-900";
-  const mutedTextStyle = "text-lime-800/40";
+  const primaryTextStyle = "text-lime-500";
+  const mutedTextStyle = "text-stone-400";
 
   return (
     <div className="container py-20 space-y-16 overflow-hidden">
