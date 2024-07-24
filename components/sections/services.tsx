@@ -10,44 +10,12 @@ import {
   useTransform,
 } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { Cog } from "lucide-react";
 
 const Services = () => {
-  const containerVariant = {
-    visible: {
-      opacity: 1,
-      transition: {
-        when: "beforeChildren",
-        staggerChildren: 0.2,
-      },
-    },
-    hidden: {
-      opacity: 0,
-      transition: {
-        when: "afterChildren",
-      },
-    },
-  };
-
-  const wordVariant = {
-    visible: { opacity: 1 },
-    hidden: { opacity: 0.05 },
-  };
-
-  const primaryTextStyle = "text-lime-500";
-  const mutedTextStyle = "text-stone-400";
-
-  // const paragraph = [
-  //   { text: "Delivering", primary: false },
-  //   { text: "Top-notch", primary: true },
-  //   { text: "Services", primary: true },
-  //   { text: "at", primary: false },
-  //   { text: "Unbeatable", primary: true },
-  //   { text: "Prices.", primary: true },
-  // ];
-
   return (
     <div className="container py-20 space-y-16 overflow-hidden">
-      <Paragraph
+      <ScrollAnimatedParagraph
         paragraph={[
           { text: "Delivering", primary: false },
           { text: "Top-notch", primary: true },
@@ -106,7 +74,7 @@ const Services = () => {
 
       <Separator />
 
-      <Paragraph
+      <ScrollAnimatedParagraph
         className="font-medium text-xl leading-tight antialiased uppercase max-w-[900px] mx-auto"
         paragraph={[
           { text: "Upgrade", primary: false },
@@ -136,11 +104,62 @@ const Services = () => {
           { text: "and a lot more!", primary: true },
         ]}
       />
+
+      <div className="flex items-center justify-center">
+        <ScrollAnimatedCog />
+      </div>
     </div>
   );
 };
 
-const Paragraph = ({
+const ScrollAnimatedCog = () => {
+  const { scrollY } = useScroll();
+  const rotate = useSpring(
+    useTransform(scrollY, [0, 1000], [0, 360], { clamp: false })
+  );
+  const rotateAnti = useSpring(
+    useTransform(scrollY, [0, 1000], [360, 0], {
+      clamp: false,
+    })
+  );
+  return (
+    <div className="relative h-72 w-72">
+      <motion.div
+        style={{ rotate }}
+        className="absolute w-24 h-auto top-0 right-14"
+      >
+        <Cog className="w-full h-full text-stone-300" />
+      </motion.div>
+      <motion.div
+        style={{ rotate }}
+        className="absolute w-36 h-auto bottom-0 right-0"
+      >
+        <Cog className="w-full h-full text-stone-300" />
+      </motion.div>
+      <motion.div
+        style={{ rotate: rotateAnti }}
+        className="absolute w-48 h-auto top-10 left-0"
+      >
+        <Cog className="w-full h-full text-stone-300" />
+      </motion.div>
+
+      {/* <MotionCog
+        style={{ rotate }}
+        className="absolute w-24 h-auto top-0 right-14 text-stone-300"
+      />
+      <MotionCog
+        style={{ rotate }}
+        className="absolute w-36 h-auto bottom-0 right-0 text-stone-300"
+      />
+      <MotionCog
+        style={{ rotate }}
+        className="absolute w-48 h-auto top-10 left-0 text-stone-300"
+      /> */}
+    </div>
+  );
+};
+
+const ScrollAnimatedParagraph = ({
   paragraph,
   className,
 }: {

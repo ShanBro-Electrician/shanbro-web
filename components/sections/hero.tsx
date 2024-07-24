@@ -1,16 +1,9 @@
 import PhoneButton from "@/components/phone-button";
 import WhatsappButton from "@/components/whatsapp-button";
 import Image from "next/image";
-import {
-  motion,
-  useScroll,
-  useSpring,
-  useTransform,
-  Variants,
-} from "framer-motion";
+import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import { Separator } from "../ui/separator";
-import { Cog } from "lucide-react";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 
 const Hero = () => {
   const bgRef = useRef(null);
@@ -19,6 +12,7 @@ const Hero = () => {
     offset: ["start start", "end start"],
   });
   const bgY = useTransform(scrollYProgress, [0, 1], [0, 300]);
+  const bgSpringY = useSpring(bgY, { bounce: 0, duration: 1 });
 
   return (
     <div className="relative bg-stone-900/40">
@@ -27,7 +21,10 @@ const Hero = () => {
         ref={bgRef}
         className="absolute top-0 bottom-0 left-0 right-0 overflow-hidden"
       >
-        <motion.div style={{ y: bgY }} className="absolute w-full h-full -z-20">
+        <motion.div
+          style={{ y: bgSpringY }}
+          className="absolute w-full h-full -z-20"
+        >
           <Image
             src="/HeroBg.jpg"
             fill
@@ -67,9 +64,6 @@ const Hero = () => {
           for all your electrical and plumbing needs. Contact us today for a
           free quote!
         </p>
-        {/* <div className="flex items-center justify-center relative sm:col-start-2 lg:col-start-3">
-          <Cog className="absolute w-48 h-48 sm:w-72 sm:h-72 lg:w-96 lg:h-96 -top-2 text-stone-300" />
-        </div> */}
       </div>
     </div>
   );
