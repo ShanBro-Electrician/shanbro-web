@@ -46,13 +46,13 @@ const Hero = () => {
       </div>
 
       <div className="container pb-24 pt-40 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 z-10">
-        <h1 className="uppercase leading-none text-lime-200 font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl sm:col-span-2 lg:col-span-3">
+        <h1 className="uppercase leading-none text-yellow-100 font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl sm:col-span-2 lg:col-span-3">
           We excel in{" "}
-          <span className="text-lime-400">Electrical & Plumbing</span>
+          <span className="text-lime-300">Electrical & Plumbing</span>
         </h1>
-        <Separator className="sm:col-span-2 lg:col-span-3 bg-lime-100/30" />
+        <Separator className="sm:col-span-2 lg:col-span-3 bg-stone-100/30" />
         <div className="space-y-4">
-          <h2 className="leading-none uppercase font-semibold text-lime-100 sm:text-lg md:text-xl lg:text-2xl xl:text-3xl">
+          <h2 className="leading-none uppercase font-semibold text-yellow-100 sm:text-lg md:text-xl lg:text-2xl xl:text-3xl">
             We&apos;re only <br /> one call away
           </h2>
           <div className="flex gap-2">
@@ -60,7 +60,7 @@ const Hero = () => {
             <PhoneButton />
           </div>
         </div>
-        <p className="text-sm text-lime-100">
+        <p className="text-sm text-stone-200">
           At ShanBro, we&apos;ve been serving customers with high quality
           repairs, installations, and emergency services. With transparent
           pricing and a commitment to safety, we&apos;re your trusted partner
