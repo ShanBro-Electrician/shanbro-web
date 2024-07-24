@@ -1,8 +1,15 @@
 "use client";
 import Image from "next/image";
-import React from "react";
+import React, { ReactNode, useRef } from "react";
 import { Separator } from "../ui/separator";
-import { motion } from "framer-motion";
+import {
+  motion,
+  MotionValue,
+  useScroll,
+  useSpring,
+  useTransform,
+} from "framer-motion";
+import { cn } from "@/lib/utils";
 
 const Services = () => {
   const containerVariant = {
@@ -29,43 +36,28 @@ const Services = () => {
   const primaryTextStyle = "text-lime-500";
   const mutedTextStyle = "text-stone-400";
 
+  // const paragraph = [
+  //   { text: "Delivering", primary: false },
+  //   { text: "Top-notch", primary: true },
+  //   { text: "Services", primary: true },
+  //   { text: "at", primary: false },
+  //   { text: "Unbeatable", primary: true },
+  //   { text: "Prices.", primary: true },
+  // ];
+
   return (
     <div className="container py-20 space-y-16 overflow-hidden">
-      <motion.h2
-        variants={containerVariant}
-        initial="hidden"
-        whileInView="visible"
+      <Paragraph
+        paragraph={[
+          { text: "Delivering", primary: false },
+          { text: "Top-notch", primary: true },
+          { text: "Services", primary: true },
+          { text: "at", primary: false },
+          { text: "Unbeatable", primary: true },
+          { text: "Prices.", primary: true },
+        ]}
         className="leading-none antialiased uppercase font-medium text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
-      >
-        <motion.span className={mutedTextStyle} variants={wordVariant}>
-          Delivering
-        </motion.span>
-        <br />
-        <motion.span className={primaryTextStyle} variants={wordVariant}>
-          top-notch
-        </motion.span>{" "}
-        <motion.span className={primaryTextStyle} variants={wordVariant}>
-          services
-        </motion.span>
-        <br />
-        <motion.span className={mutedTextStyle} variants={wordVariant}>
-          at
-        </motion.span>{" "}
-        <motion.span className={primaryTextStyle} variants={wordVariant}>
-          unbeatable
-        </motion.span>{" "}
-        <motion.span className={primaryTextStyle} variants={wordVariant}>
-          prices.
-        </motion.span>
-      </motion.h2>
-
-      {/* <h2 className="font-normal text-lime-800/40 leading-none antialiased uppercase text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
-        Delivering <br />
-        <span className="text-lime-800">
-          top-notch services <br />
-          <span className="text-lime-800/40">at</span> unbeatable prices.
-        </span>
-      </h2> */}
+      />
       <div className="flex justify-between gap-2 -mx-32 h-48">
         <div className="relative w-full h-full">
           <Image
@@ -114,101 +106,102 @@ const Services = () => {
 
       <Separator />
 
-      <motion.h3
-        className="font-medium text-xl leading-none antialiased uppercase max-w-[900px] mx-auto"
-        variants={containerVariant}
-        initial="hidden"
-        whileInView="visible"
-      >
-        <motion.span className={mutedTextStyle} variants={wordVariant}>
-          Upgrade
-        </motion.span>{" "}
-        <motion.span className={mutedTextStyle} variants={wordVariant}>
-          your
-        </motion.span>{" "}
-        <motion.span className={primaryTextStyle} variants={wordVariant}>
-          House,
-        </motion.span>{" "}
-        <motion.span className={primaryTextStyle} variants={wordVariant}>
-          Shop,
-        </motion.span>{" "}
-        <motion.span className={primaryTextStyle} variants={wordVariant}>
-          or
-        </motion.span>{" "}
-        <motion.span className={primaryTextStyle} variants={wordVariant}>
-          Office
-        </motion.span>{" "}
-        <br />
-        <motion.span className={mutedTextStyle} variants={wordVariant}>
-          with
-        </motion.span>{" "}
-        <motion.span className={mutedTextStyle} variants={wordVariant}>
-          our
-        </motion.span>{" "}
-        <motion.span className={mutedTextStyle} variants={wordVariant}>
-          complete
-        </motion.span>{" "}
-        <motion.span className={primaryTextStyle} variants={wordVariant}>
-          Renovation,
-        </motion.span>{" "}
-        <motion.span className={primaryTextStyle} variants={wordVariant}>
-          Electrical,
-        </motion.span>{" "}
-        <motion.span className={primaryTextStyle} variants={wordVariant}>
-          and
-        </motion.span>{" "}
-        <motion.span className={primaryTextStyle} variants={wordVariant}>
-          Plumbing
-        </motion.span>{" "}
-        <motion.span className={primaryTextStyle} variants={wordVariant}>
-          Services
-        </motion.span>{" "}
-        <br />
-        <motion.span className={mutedTextStyle} variants={wordVariant}>
-          covering
-        </motion.span>{" "}
-        <motion.span className={primaryTextStyle} variants={wordVariant}>
-          Water Heaters,
-        </motion.span>{" "}
-        <motion.span className={primaryTextStyle} variants={wordVariant}>
-          Ceiling Fans,
-        </motion.span>{" "}
-        <motion.span className={primaryTextStyle} variants={wordVariant}>
-          Air Conditioners,
-        </motion.span>{" "}
-        <motion.span className={primaryTextStyle} variants={wordVariant}>
-          Lighting,
-        </motion.span>{" "}
-        <motion.span className={primaryTextStyle} variants={wordVariant}>
-          CCTV,
-        </motion.span>{" "}
-        <motion.span className={primaryTextStyle} variants={wordVariant}>
-          Power Sockets,
-        </motion.span>{" "}
-        <motion.span className={primaryTextStyle} variants={wordVariant}>
-          Main DB Fuse Boxes,
-        </motion.span>{" "}
-        <motion.span className={primaryTextStyle} variants={wordVariant}>
-          and a lot more!
-        </motion.span>{" "}
-      </motion.h3>
-
-      {/* <h3 className="font-medium text-lime-800/40 text-xl leading-none antialiased uppercase max-w-[900px] mx-auto">
-        Upgrade your{" "}
-        <span className="text-lime-800">House, Shop, or Office</span>
-        <br />
-        with our complete{" "}
-        <span className="text-lime-800">
-          Renovation, Electrical, and Plumbing services
-        </span>
-        <br />
-        covering{" "}
-        <span className="text-lime-800">
-          water heaters, ceiling fans, air conditioners, lighting, CCTV, power
-          sockets, main db fuse boxes, and a lot more!
-        </span>
-      </h3> */}
+      <Paragraph
+        className="font-medium text-xl leading-tight antialiased uppercase max-w-[900px] mx-auto"
+        paragraph={[
+          { text: "Upgrade", primary: false },
+          { text: "your", primary: false },
+          { text: "House,", primary: true },
+          { text: "Shop,", primary: true },
+          { text: "or", primary: true },
+          { text: "Office", primary: true },
+          { text: null },
+          { text: "with", primary: false },
+          { text: "our", primary: false },
+          { text: "complete", primary: false },
+          { text: "Renovation,", primary: true },
+          { text: "Electrical,", primary: true },
+          { text: "and", primary: true },
+          { text: "Plumbing", primary: true },
+          { text: "Services", primary: true },
+          { text: null },
+          { text: "covering", primary: false },
+          { text: "Water heaters,", primary: true },
+          { text: "Ceiling fans,", primary: true },
+          { text: "Air conditioners,", primary: true },
+          { text: "Lighting,", primary: true },
+          { text: "CCTV,", primary: true },
+          { text: "Power Sockets,", primary: true },
+          { text: "Main DB Fuse Boxes,", primary: true },
+          { text: "and a lot more!", primary: true },
+        ]}
+      />
     </div>
+  );
+};
+
+const Paragraph = ({
+  paragraph,
+  className,
+}: {
+  paragraph: { text: string | null; primary?: boolean }[];
+  className?: string;
+}) => {
+  const container = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ["start 0.9", "start 0.3"],
+  });
+
+  return (
+    <p ref={container} className={className}>
+      {paragraph.map((word, i) => {
+        const start = i / paragraph.length;
+        const end = start + 1 / paragraph.length;
+        return word.text ? (
+          <Word
+            key={i}
+            primary={word.primary}
+            progress={scrollYProgress}
+            range={[start, end]}
+          >
+            {word.text}
+          </Word>
+        ) : (
+          <br />
+        );
+      })}
+    </p>
+  );
+};
+
+const Word = ({
+  children,
+  progress,
+  range,
+  primary,
+}: {
+  children: string;
+  progress: MotionValue<number>;
+  range: number[];
+  primary?: boolean;
+}) => {
+  const opacity = useTransform(progress, range, [0, 1]);
+  const y = useTransform(progress, range, [20, 0]);
+  const ySpring = useSpring(y, { bounce: 0, duration: 1 });
+
+  return (
+    <span className={cn(primary ? "text-lime-500" : "text-stone-700")}>
+      <motion.span
+        style={{
+          opacity: opacity,
+          y: ySpring,
+        }}
+        className="inline-block"
+      >
+        {children}
+      </motion.span>{" "}
+    </span>
   );
 };
 
