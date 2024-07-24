@@ -6,11 +6,8 @@ const Footer = () => {
   return (
     <div className="container py-8 flex flex-col gap-4 sm:flex-row sm:justify-between sm:items-center bg-gradient-to-br from-lime-200 to-lime-400 rounded-3xl">
       <div className="space-y-2">
-        {/* <div className="flex flex-col items-center gap-2 sm:flex-row">
-          <img src="Logo.png" alt="Logo" className="w-10" />
-        </div> */}
-        <div className="relative w-24 h-24 mx-auto sm:mx-0">
-          <Image src="/Logo.png" alt="Logo" fill className="object-cover" />
+        <div className="relative h-12 w-40 mx-auto sm:mx-0">
+          <Image src="/Logo.svg" alt="Logo" fill />
         </div>
         <p className="text-lime-950 font-medium text-xs text-center sm:text-left">
           8A, Sentul Park,
