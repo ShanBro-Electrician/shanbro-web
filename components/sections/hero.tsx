@@ -18,7 +18,7 @@ const Hero = () => {
       {/* Background image */}
       <div
         ref={bgRef}
-        className="absolute top-0 bottom-0 left-0 right-0 overflow-hidden"
+        className="absolute top-0 bottom-0 left-0 right-0 overflow-hidden pointer-events-none"
       >
         <motion.div style={{ y: bgY }} className="absolute w-full h-full -z-20">
           <Image
