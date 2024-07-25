@@ -1,13 +1,13 @@
-import Image from "next/image";
 import PhoneButton from "../phone-button";
 import WhatsappButton from "../whatsapp-button";
+import Logo from "../logo";
 
 const Footer = () => {
   return (
     <div className="container py-8 flex flex-col gap-4 sm:flex-row sm:justify-between sm:items-center bg-gradient-to-br from-lime-200 to-lime-400 rounded-3xl">
       <div className="space-y-2">
-        <div className="relative h-12 w-40 mx-auto sm:mx-0">
-          <Image src="/Logo.svg" alt="Logo" fill />
+        <div className="mx-auto sm:mx-0">
+          <Logo height={48} />
         </div>
         <p className="text-lime-950 font-medium text-xs text-center sm:text-left">
           8A, Sentul Park,
