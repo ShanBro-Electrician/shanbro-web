@@ -75,7 +75,7 @@ const Services = () => {
       <Separator />
 
       <ScrollAnimatedParagraph
-        className="font-medium text-xl leading-tight antialiased uppercase max-w-[900px] mx-auto"
+        className="font-medium text-2xl leading-tight antialiased uppercase max-w-[900px] mx-auto"
         paragraph={[
           { text: "Upgrade", primary: false },
           { text: "your", primary: false },
@@ -144,19 +144,6 @@ const ScrollAnimatedCog = () => {
       >
         <Cog className="w-full h-full text-stone-200" />
       </motion.div>
-
-      {/* <MotionCog
-        style={{ rotate }}
-        className="absolute w-24 h-auto top-0 right-14 text-stone-300"
-      />
-      <MotionCog
-        style={{ rotate }}
-        className="absolute w-36 h-auto bottom-0 right-0 text-stone-300"
-      />
-      <MotionCog
-        style={{ rotate }}
-        className="absolute w-48 h-auto top-10 left-0 text-stone-300"
-      /> */}
     </div>
   );
 };
