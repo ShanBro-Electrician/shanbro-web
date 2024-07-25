@@ -1,5 +1,6 @@
 import { motion, Variants } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 const Gallery = () => {
   const motionVariants: Variants = {
@@ -41,6 +42,12 @@ const Gallery = () => {
           </motion.div>
         ))}
       </div>
+      <Link
+        href="/gallery"
+        className="border-2 border-white text-white font-semibold inline-block text-center w-full p-4 mt-4 transition-colors hover:text-black hover:bg-white"
+      >
+        View more photos
+      </Link>
     </div>
   );
 };

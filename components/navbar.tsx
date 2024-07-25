@@ -6,6 +6,7 @@ import { Menu } from "lucide-react";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion, Variants } from "framer-motion";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -52,7 +53,9 @@ const Navbar = () => {
       )}
     >
       <div className="border-b-[1px] border-b-stone-100/30 container py-2 flex justify-between items-center">
-        <Logo height={48} />
+        <Link href="/">
+          <Logo height={48} />
+        </Link>
         <Menu className="sm:hidden" onClick={() => setIsOpen(!isOpen)} />
         <div className="hidden sm:flex gap-2">
           <WhatsappButton />
