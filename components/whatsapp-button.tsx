@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const WhatsappButton = () => {
@@ -7,7 +8,9 @@ const WhatsappButton = () => {
       target="_blank"
       className="rounded-full bg-lime-600 text-white py-2 px-4 cursor-pointer text-xs font-semibold flex items-center gap-1"
     >
-      <img src="WhatsApp.svg" alt="whatsapp logo" width={20} />
+      <div className="relative w-6 h-6">
+        <Image src="WhatsApp.svg" alt="whatsapp logo" fill />
+      </div>
       Whatsapp
     </a>
   );

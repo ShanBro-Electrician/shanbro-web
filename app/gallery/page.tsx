@@ -36,9 +36,9 @@ const Page = () => {
               transition={{ duration: 0.5, ease: "easeOut" }}
               viewport={{ once: true }}
               className="relative w-full h-40 odd:col-span-2"
+              key={file}
             >
               <Image
-                key={file}
                 src={`/gallery/${file}`}
                 alt={file}
                 fill
