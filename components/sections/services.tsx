@@ -189,7 +189,7 @@ const ScrollAnimatedParagraph = ({
             {word.text}
           </Word>
         ) : (
-          <br />
+          <br key={i} />
         );
       })}
     </p>
