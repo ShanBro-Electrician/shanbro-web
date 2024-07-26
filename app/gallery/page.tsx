@@ -35,7 +35,7 @@ const Page = () => {
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.5, ease: "easeOut" }}
               viewport={{ once: true }}
-              className="relative w-full h-40 odd:col-span-2"
+              className="relative w-full h-40"
               key={file}
             >
               <Image
