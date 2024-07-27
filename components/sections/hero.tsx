@@ -12,7 +12,8 @@ const Hero = () => {
     offset: ["start start", "end start"],
   });
   const bgY = useTransform(scrollYProgress, [0, 1], [0, 300]);
-  const contentY = useTransform(scrollYProgress, [0, 1], [0, 100]);
+  const contentY = useTransform(scrollYProgress, [0, 1], [0, 150]);
+  const contentScale = useTransform(scrollYProgress, [0, 1], [1, 0.9]);
 
   return (
     <div className="relative bg-zinc-950/50">
@@ -44,7 +45,7 @@ const Hero = () => {
       </div>
 
       <motion.div
-        style={{ y: contentY }}
+        style={{ y: contentY, scale: contentScale, transformOrigin: "top" }}
         className="container pb-24 pt-40 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 z-10"
       >
         <h1 className="uppercase leading-none text-yellow-100 font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl sm:col-span-2 lg:col-span-3">
