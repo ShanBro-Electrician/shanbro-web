@@ -11,7 +11,10 @@ const Hero = () => {
     target: bgRef,
     offset: ["start start", "end start"],
   });
-  const bgY = useTransform(scrollYProgress, [0, 1], [0, 300]);
+  const bgY = useTransform(scrollYProgress, [0, 1], [50, 200]);
+  const contentY = useTransform(scrollYProgress, [0, 1], [0, -300]);
+
+  // const heroFade = useTransform(scrollYProgress, [0,1], [0,1])
 
   return (
     <div className="relative bg-zinc-950/50">
@@ -20,13 +23,17 @@ const Hero = () => {
         ref={bgRef}
         className="absolute top-0 bottom-0 left-0 right-0 overflow-hidden pointer-events-none"
       >
+        <motion.div
+          className="bg-zinc-950/90 inset-0 absolute z-20"
+          style={{ opacity: scrollYProgress }}
+        />
         <motion.div style={{ y: bgY }} className="absolute w-full h-full -z-20">
           <Image
             src="/HeroBg.jpg"
             fill
             quality={50}
             alt="Electrical and plumbing works"
-            className="h-full w-full object-cover"
+            className="h-full w-full scale-125 object-cover"
           />
         </motion.div>
         <Image
@@ -38,7 +45,10 @@ const Hero = () => {
         />
       </div>
 
-      <div className="container pb-24 pt-40 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 z-10">
+      <motion.div
+        style={{ y: contentY }}
+        className="container pb-24 pt-40 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 z-10"
+      >
         <h1 className="uppercase leading-none text-yellow-100 font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl sm:col-span-2 lg:col-span-3">
           <span>We excel in </span>
           <span className="text-lime-300">Electrical & Plumbing</span>
@@ -60,7 +70,7 @@ const Hero = () => {
           for all your electrical and plumbing needs. Contact us today for a
           free quote!
         </p>
-      </div>
+      </motion.div>
     </div>
   );
 };
