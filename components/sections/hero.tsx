@@ -11,10 +11,8 @@ const Hero = () => {
     target: bgRef,
     offset: ["start start", "end start"],
   });
-  const bgY = useTransform(scrollYProgress, [0, 1], [50, 200]);
+  const bgY = useTransform(scrollYProgress, [0, 1], [0, 300]);
   const contentY = useTransform(scrollYProgress, [0, 1], [0, 100]);
-
-  // const heroFade = useTransform(scrollYProgress, [0,1], [0,1])
 
   return (
     <div className="relative bg-zinc-950/50">
