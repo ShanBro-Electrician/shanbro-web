@@ -12,7 +12,7 @@ const Hero = () => {
     offset: ["start start", "end start"],
   });
   const bgY = useTransform(scrollYProgress, [0, 1], [50, 200]);
-  const contentY = useTransform(scrollYProgress, [0, 1], [0, -300]);
+  const contentY = useTransform(scrollYProgress, [0, 1], [0, 100]);
 
   // const heroFade = useTransform(scrollYProgress, [0,1], [0,1])
 
@@ -24,7 +24,7 @@ const Hero = () => {
         className="absolute top-0 bottom-0 left-0 right-0 overflow-hidden pointer-events-none"
       >
         <motion.div
-          className="bg-zinc-950/90 inset-0 absolute z-20"
+          className="bg-zinc-900/90 inset-0 absolute z-20"
           style={{ opacity: scrollYProgress }}
         />
         <motion.div style={{ y: bgY }} className="absolute w-full h-full -z-20">
