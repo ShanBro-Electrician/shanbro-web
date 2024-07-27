@@ -44,7 +44,7 @@ const Gallery = () => {
       </div>
       <Link
         href="/gallery"
-        className="border-2 border-white text-white font-semibold inline-block text-center w-full p-4 mt-4 transition-colors hover:text-black hover:bg-white"
+        className="rounded border-2 border-white text-white font-semibold inline-block text-center w-full p-4 mt-4 transition-colors hover:text-black hover:bg-white"
       >
         View more photos
       </Link>
