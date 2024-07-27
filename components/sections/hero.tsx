@@ -40,7 +40,7 @@ const Hero = () => {
 
       <div className="container pb-24 pt-40 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 z-10">
         <h1 className="uppercase leading-none text-yellow-100 font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl sm:col-span-2 lg:col-span-3">
-          We excel in{" "}
+          <span>We excel in </span>
           <span className="text-lime-300">Electrical & Plumbing</span>
         </h1>
         <Separator className="sm:col-span-2 lg:col-span-3 bg-stone-100/30" />
