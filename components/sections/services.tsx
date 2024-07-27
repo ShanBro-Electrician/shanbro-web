@@ -75,7 +75,7 @@ const Services = () => {
       <Separator />
 
       <ScrollAnimatedParagraph
-        className="font-medium text-2xl leading-tight antialiased uppercase max-w-[900px] mx-auto"
+        className="font-semibold text-2xl leading-tight antialiased max-w-[900px] mx-auto"
         paragraph={[
           { text: "Upgrade", primary: false },
           { text: "your", primary: false },
@@ -83,6 +83,7 @@ const Services = () => {
           { text: "Shop,", primary: true },
           { text: "or", primary: true },
           { text: "Office", primary: true },
+          { text: null },
           { text: null },
           { text: "with", primary: false },
           { text: "our", primary: false },
@@ -92,6 +93,7 @@ const Services = () => {
           { text: "and", primary: true },
           { text: "Plumbing", primary: true },
           { text: "Services", primary: true },
+          { text: null },
           { text: null },
           { text: "covering", primary: false },
           { text: "Water heaters,", primary: true },
@@ -194,16 +196,13 @@ const Word = ({
   range: number[];
   primary?: boolean;
 }) => {
-  const opacity = useTransform(progress, range, [0, 1]);
-  const y = useTransform(progress, range, [20, 0]);
-  const ySpring = useSpring(y, { bounce: 0, duration: 1 });
+  const opacity = useTransform(progress, range, [0.15, 1]);
 
   return (
-    <span className={cn(primary ? "text-lime-500" : "text-stone-700")}>
+    <span className={cn(primary ? "text-lime-500" : "text-zinc-950")}>
       <motion.span
         style={{
           opacity: opacity,
-          y: ySpring,
         }}
         className="inline-block"
       >
