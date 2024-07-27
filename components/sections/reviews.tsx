@@ -9,14 +9,12 @@ const Reviews = () => {
       y: 30,
       scaleY: 1.5,
       transformOrigin: "top",
-      filter: "blur(5px)",
     },
     visible: {
       opacity: 1,
       y: 0,
       scaleY: 1,
       transformOrigin: "top",
-      filter: "blur(0)",
       transition: { duration: 0.3 },
     },
   };
