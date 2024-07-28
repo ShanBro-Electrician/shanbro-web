@@ -75,7 +75,7 @@ const Services = () => {
       <Separator />
 
       <ScrollAnimatedParagraph
-        className="font-semibold text-2xl leading-tight antialiased max-w-[900px] mx-auto"
+        className="font-normal text-2xl leading-tight antialiased max-w-[900px] mx-auto"
         paragraph={[
           { text: "Upgrade", primary: false },
           { text: "your", primary: false },
