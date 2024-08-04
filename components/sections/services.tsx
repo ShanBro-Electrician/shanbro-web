@@ -74,8 +74,11 @@ const Services = () => {
 
       <Separator />
 
+      <div className="">
+        <ScrollAnimatedCog />
+      </div>
       <ScrollAnimatedParagraph
-        className="font-normal text-2xl leading-tight antialiased max-w-[900px] mx-auto"
+        className="my-0 font-normal text-3xl leading-tight antialiased max-w-[700px] mx-auto text-center"
         paragraph={[
           { text: "Upgrade", primary: false },
           { text: "your", primary: false },
@@ -83,8 +86,6 @@ const Services = () => {
           { text: "Shop,", primary: true },
           { text: "or", primary: true },
           { text: "Office", primary: true },
-          { text: null },
-          { text: null },
           { text: "with", primary: false },
           { text: "our", primary: false },
           { text: "complete", primary: false },
@@ -93,21 +94,25 @@ const Services = () => {
           { text: "and", primary: true },
           { text: "Plumbing", primary: true },
           { text: "Services", primary: true },
-          { text: null },
-          { text: null },
           { text: "covering", primary: false },
-          { text: "Water heaters,", primary: true },
-          { text: "Ceiling fans,", primary: true },
-          { text: "Air conditioners,", primary: true },
+          { text: "Water", primary: true },
+          { text: "heaters,", primary: true },
+          { text: "Ceiling", primary: true },
+          { text: "fans,", primary: true },
+          { text: "Air", primary: true },
+          { text: "conditioners,", primary: true },
           { text: "Lighting,", primary: true },
           { text: "CCTV,", primary: true },
-          { text: "Power Sockets,", primary: true },
-          { text: "Main DB Fuse Boxes,", primary: true },
+          { text: "Power", primary: true },
+          { text: "Sockets,", primary: true },
+          { text: "Main", primary: true },
+          { text: "DB", primary: true },
+          { text: "Fuse", primary: true },
+          { text: "Boxes,", primary: true },
           { text: "and a lot more!", primary: true },
         ]}
       />
-
-      <div className="flex items-center justify-center">
+      <div className="float-right">
         <ScrollAnimatedCog />
       </div>
     </div>
