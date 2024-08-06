@@ -79,7 +79,7 @@ const Hero = () => {
           for all your electrical and plumbing needs. Contact us today for a
           free quote!
         </p>
-        <ul className="self-end">
+        <ul className="self-end place-self-end">
           {[
             {
               site: "TikTok",
@@ -88,11 +88,16 @@ const Hero = () => {
           ].map((s) => (
             <li key={s.site}>
               <Link
-                className="text-white text-3xl font-semibold gap-2 flex items-center lg:justify-end"
+                className="text-zinc-300 text-3xl flex items-center lg:justify-end transition-transform group hover:-translate-x-2 hover:underline hover:text-white hover:font-semibold"
                 href={s.href}
                 target="_blank"
               >
-                {s.site} <ArrowUpRight width={40} height={40} />
+                {s.site}{" "}
+                <ArrowUpRight
+                  className="relative transition-transform group-hover:translate-x-4 group-hover:-translate-y-2 group-hover:scale-125 group-hover:stroke-[3]"
+                  width={40}
+                  height={40}
+                />
               </Link>
             </li>
           ))}
