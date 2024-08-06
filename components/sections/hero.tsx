@@ -83,7 +83,7 @@ const Hero = () => {
           ].map((s) => (
             <li key={s.site}>
               <Link
-                className="text-white text-3xl font-semibold gap-2 flex items-center justify-end"
+                className="text-white text-3xl font-semibold gap-2 flex items-center lg:justify-end"
                 href={s.href}
                 target="_blank"
               >
