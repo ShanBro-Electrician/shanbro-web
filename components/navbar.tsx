@@ -52,7 +52,7 @@ const Navbar = () => {
           : "text-zinc-100 bg-transparent"
       )}
     >
-      <div className="border-b-[1px] border-b-stone-100/30 container py-2 flex justify-between items-center">
+      <div className="container py-2 flex justify-between items-center">
         <Link href="/">
           <Logo height={48} />
         </Link>
