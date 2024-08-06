@@ -53,10 +53,15 @@ const Hero = () => {
         style={{ y: contentY }}
         className="container pb-24 pt-40 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 z-10"
       >
-        <h1 className="uppercase leading-none text-yellow-100 font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl sm:col-span-2 lg:col-span-3">
-          <span>We excel in </span>
-          <span className="text-lime-300">Electrical & Plumbing</span>
-        </h1>
+        <motion.h1
+          initial={{ y: 30, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          className="origin-left uppercase leading-none text-yellow-100 font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl sm:col-span-2 lg:col-span-3"
+        >
+          We excel in
+          <span className="text-lime-300"> Electrical & Plumbing</span>
+        </motion.h1>
         <Separator className="sm:col-span-2 lg:col-span-3 bg-stone-100/30" />
         <div className="space-y-4">
           <h2 className="leading-none uppercase font-semibold text-yellow-100 sm:text-lg md:text-xl lg:text-2xl xl:text-3xl">
