@@ -77,8 +77,11 @@ const Services = () => {
       <div className="">
         <ScrollAnimatedCog />
       </div>
+      <h2 className="text-center text-4xl font-bold text-zinc-900 max-w-[700px] mx-auto uppercase">
+        KL City&apos;s Go-To Plumber and Electrician - Always Available!
+      </h2>
       <ScrollAnimatedParagraph
-        className="my-0 font-normal text-3xl leading-tight antialiased max-w-[700px] mx-auto text-center"
+        className="my-0 font-normal text-2xl leading-tight antialiased max-w-[700px] mx-auto text-center"
         paragraph={[
           { text: "Upgrade", primary: false },
           { text: "your", primary: false },
@@ -165,7 +168,7 @@ const ScrollAnimatedParagraph = ({
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
-    offset: ["start 0.9", "start 0.3"],
+    offset: ["start end", "start 0.5"],
   });
 
   return (
