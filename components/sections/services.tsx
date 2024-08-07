@@ -77,11 +77,11 @@ const Services = () => {
       <div className="">
         <ScrollAnimatedCog />
       </div>
-      <h2 className="text-center text-4xl font-bold text-zinc-900 max-w-[700px] mx-auto uppercase">
+      <h2 className="text-4xl font-bold text-zinc-900 max-w-[700px] mx-auto uppercase">
         KL City&apos;s Go-To Plumber and Electrician - Always Available!
       </h2>
       <ScrollAnimatedParagraph
-        className="my-0 font-normal text-2xl leading-tight antialiased max-w-[700px] mx-auto text-center"
+        className="my-0 font-medium text-2xl leading-none antialiased max-w-[700px] mx-auto"
         paragraph={[
           { text: "Upgrade", primary: false },
           { text: "your", primary: false },
