@@ -2,17 +2,17 @@
 import Image from "next/image";
 import React, { ReactNode, useRef } from "react";
 import { Separator } from "../ui/separator";
-import {
-  motion,
-  MotionValue,
-  useScroll,
-  useSpring,
-  useTransform,
-} from "framer-motion";
+import { motion, MotionValue, useScroll, useTransform } from "framer-motion";
 import { cn } from "@/lib/utils";
-import { Cog } from "lucide-react";
 
 const Services = () => {
+  const klCityContainer = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: klCityContainer,
+    offset: ["start end", "end start"],
+  });
+  const klCityImageY = useTransform(scrollYProgress, [0, 1], [150, -150]);
+
   return (
     <div className="container py-20 space-y-16 overflow-hidden">
       <ScrollAnimatedParagraph
@@ -77,27 +77,33 @@ const Services = () => {
       {/* <div className="">
         <ScrollAnimatedCog />
       </div> */}
-      <div className="flex flex-col gap-12 md:flex-row-reverse">
-        <div className="flex flex-col gap-8 w-full md:py-40">
-          <h2 className="text-4xl font-semibold text-zinc-900">
+      <div
+        ref={klCityContainer}
+        className="flex flex-col gap-12 md:flex-row-reverse"
+      >
+        <div className="flex flex-col gap-12 w-full md:py-40">
+          <h2 className="text-3xl font-semibold text-zinc-900">
             We are KL City&apos;s go-to{" "}
-            <span className="bg-lime-200">Plumber and Electrician</span>!
+            <span className="bg-lime-100">Plumber and Electrician</span>!
           </h2>
-          <p className="font-semibold text-lg leading-relaxed antialiased">
+          <p className="font-semibold text-base leading-relaxed antialiased">
             Upgrade your house, shop, or office with our complete renovation,
             electrical, and plumbing services covering water heaters, ceiling
             fans, air conditioners, lighting, CCTV, power sockets, main db fuse
             boxes, and a lot more!
           </p>
         </div>
-        <div className="relative h-96 md:h-auto md:w-full">
+        <motion.div
+          style={{ y: klCityImageY }}
+          className="relative h-96 md:h-auto md:w-full"
+        >
           <Image
             src="/servicesKl.jpeg"
             alt="Our services"
             fill
             className="object-cover"
           />
-        </div>
+        </motion.div>
       </div>
       {/* Upgrade your house, shop, or office with our complete renovation, electrical, and plumbing services covering water heaters, ceiling fans, air conditioners, lighting, CCTV, power sockets, main db fuse boxes, and a lot more! */}
       {/* <ScrollAnimatedParagraph
