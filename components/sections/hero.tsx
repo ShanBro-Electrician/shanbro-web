@@ -57,15 +57,15 @@ const Hero = () => {
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
-          className="origin-left uppercase leading-none text-yellow-100 font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl sm:col-span-2 lg:col-span-3"
+          className="origin-left uppercase leading-none text-yellow-100 font-bold text-5xl md:text-6xl lg:text-7xl xl:text-8xl sm:col-span-2 lg:col-span-3"
         >
           We excel in
           <span className="text-lime-300"> Electrical & Plumbing</span>
         </motion.h1>
         <Separator className="sm:col-span-2 lg:col-span-3 bg-stone-100/30" />
         <div className="space-y-4">
-          <h2 className="leading-none uppercase font-semibold text-yellow-100 sm:text-lg md:text-xl lg:text-2xl xl:text-3xl">
-            We&apos;re only <br /> one call away
+          <h2 className="leading-none uppercase font-semibold text-yellow-100 text-lg md:text-xl lg:text-2xl xl:text-3xl">
+            We&apos;re only one call away
           </h2>
           <div className="flex gap-2">
             <WhatsappButton />
@@ -79,7 +79,7 @@ const Hero = () => {
           for all your electrical and plumbing needs. Contact us today for a
           free quote!
         </p>
-        <ul className="self-end place-self-end">
+        <ul className="self-end place-self-end sm:place-self-start lg:place-self-end">
           {[
             {
               site: "TikTok",
@@ -88,7 +88,7 @@ const Hero = () => {
           ].map((s) => (
             <li key={s.site}>
               <Link
-                className="text-zinc-300 text-3xl flex items-center lg:justify-end transition-transform group hover:-translate-x-2 hover:underline hover:text-white hover:font-semibold"
+                className="text-zinc-300 uppercase text-3xl flex items-center lg:justify-end transition-transform group hover:-translate-x-2 hover:underline hover:text-white hover:font-semibold"
                 href={s.href}
                 target="_blank"
               >
@@ -97,6 +97,7 @@ const Hero = () => {
                   className="relative transition-transform group-hover:translate-x-4 group-hover:-translate-y-2 group-hover:scale-125 group-hover:stroke-[3]"
                   width={40}
                   height={40}
+                  strokeLinecap="square"
                 />
               </Link>
             </li>
