@@ -79,7 +79,7 @@ const Services = () => {
       </div> */}
       <div
         ref={klCityContainer}
-        className="flex flex-col gap-12 md:flex-row-reverse"
+        className="flex flex-col gap-12 md:flex-row-reverse lg:px-32"
       >
         <div className="flex flex-col gap-12 w-full md:py-40">
           <h2 className="text-3xl font-semibold text-zinc-900">
