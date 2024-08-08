@@ -28,6 +28,9 @@ const Page = () => {
     <div className="bg-zinc-950 min-h-screen py-24">
       {error}
       <div className="container">
+        <h1 className="text-xl md:text-3xl text-lime-100 font-semibold mb-2">
+          Gallery
+        </h1>
         <ul className="grid gap-2 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7">
           {filenames.map((file) => (
             <motion.div
