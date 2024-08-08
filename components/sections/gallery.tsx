@@ -38,7 +38,13 @@ const Gallery = () => {
             key={img.src}
             className="relative h-32 sm:h-48 md:h-72 lg:h-96"
           >
-            <Image src={img.src} alt={img.alt} fill className="object-cover" />
+            <Image
+              src={img.src}
+              alt={img.alt}
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              className="object-cover"
+            />
           </motion.div>
         ))}
       </div>
