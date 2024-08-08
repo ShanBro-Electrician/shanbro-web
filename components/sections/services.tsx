@@ -7,14 +7,30 @@ import { cn } from "@/lib/utils";
 
 const Services = () => {
   const klCityContainer = useRef(null);
-  const { scrollYProgress } = useScroll({
+  const servicesImagesContainer = useRef(null);
+
+  const { scrollYProgress: scrollYProgressKlService } = useScroll({
     target: klCityContainer,
     offset: ["start end", "end start"],
   });
-  const klCityImageY = useTransform(scrollYProgress, [0, 1], [150, -150]);
+  const klCityImageY = useTransform(
+    scrollYProgressKlService,
+    [0, 1],
+    [150, -150]
+  );
+
+  const { scrollYProgress: scrollYProgressServicesImages } = useScroll({
+    target: servicesImagesContainer,
+    offset: ["start end", "end start"],
+  });
+  const servicesImageX = useTransform(
+    scrollYProgressServicesImages,
+    [0, 1],
+    [150, -150]
+  );
 
   return (
-    <div className="container py-20 space-y-16 overflow-hidden">
+    <div className="container py-20 space-y-16">
       <ScrollAnimatedParagraph
         paragraph={[
           { text: "Delivering", primary: false },
@@ -26,39 +42,28 @@ const Services = () => {
         ]}
         className="leading-none antialiased uppercase font-medium text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
       />
-      <div className="flex justify-between gap-2 -mx-32 h-48">
-        <div className="relative w-full h-full">
-          <Image
-            src="/services1.jpg"
-            alt="man working"
-            fill
-            className="object-cover"
-          />
-        </div>
-        <div className="relative w-full h-full">
-          <Image
-            src="/services2.jpg"
-            alt="man working"
-            fill
-            className="object-cover"
-          />
-        </div>
-        <div className="relative w-full h-full">
-          <Image
-            src="/services3.jpg"
-            alt="man working"
-            fill
-            className="object-cover"
-          />
-        </div>
-        <div className="relative w-full h-full">
-          <Image
-            src="/services4.jpg"
-            alt="Electrical works"
-            fill
-            className="object-cover"
-          />
-        </div>
+      <div
+        className="relative h-48 md:h-60 overflow-hidden"
+        ref={servicesImagesContainer}
+      >
+        <motion.div
+          style={{ x: servicesImageX }}
+          className="absolute inset-y-0 -inset-x-64 flex justify-between gap-1 md:gap-2"
+        >
+          {[
+            { src: "/services1.jpg", alt: "Man doing plumbing works" },
+            { src: "/services2.jpg", alt: "Toolsets" },
+            {
+              src: "/services3.jpg",
+              alt: "Man doing plumbing works with toolset bag",
+            },
+            { src: "/services4.jpg", alt: "Hands doing electrical works" },
+          ].map((s) => (
+            <div key={s.src} className="relative w-full h-full">
+              <Image src={s.src} alt={s.alt} fill className="object-cover" />
+            </div>
+          ))}
+        </motion.div>
       </div>
 
       <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:justify-center">
