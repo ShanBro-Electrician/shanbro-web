@@ -60,7 +60,13 @@ const Services = () => {
             { src: "/services4.jpg", alt: "Hands doing electrical works" },
           ].map((s) => (
             <div key={s.src} className="relative w-full h-full">
-              <Image src={s.src} alt={s.alt} fill className="object-cover" />
+              <Image
+                src={s.src}
+                alt={s.alt}
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                className="object-cover"
+              />
             </div>
           ))}
         </motion.div>
@@ -107,6 +113,7 @@ const Services = () => {
             alt="Our services"
             fill
             className="object-cover"
+            sizes="(max-width: 768px) 100vw, 50vw"
           />
         </motion.div>
       </div>
