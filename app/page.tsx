@@ -13,9 +13,7 @@ export default function Home() {
       <Services />
       <Reviews />
       <Gallery />
-      <div className="p-4">
-        <Footer />
-      </div>
+      <Footer />
     </main>
   );
 }
