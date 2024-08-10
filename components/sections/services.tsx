@@ -26,7 +26,7 @@ const Services = () => {
   const servicesImageX = useTransform(
     scrollYProgressServicesImages,
     [0, 1],
-    [150, -150]
+    [100, -100]
   );
 
   return (
@@ -84,10 +84,6 @@ const Services = () => {
       </div>
 
       <Separator />
-
-      {/* <div className="">
-        <ScrollAnimatedCog />
-      </div> */}
       <div
         ref={klCityContainer}
         className="flex flex-col gap-12 md:flex-row-reverse lg:px-32"
@@ -117,84 +113,9 @@ const Services = () => {
           />
         </motion.div>
       </div>
-      {/* Upgrade your house, shop, or office with our complete renovation, electrical, and plumbing services covering water heaters, ceiling fans, air conditioners, lighting, CCTV, power sockets, main db fuse boxes, and a lot more! */}
-      {/* <ScrollAnimatedParagraph
-        className="my-0 font-medium text-2xl leading-none antialiased max-w-[700px] mx-auto"
-        paragraph={[
-          { text: "Upgrade", primary: false },
-          { text: "your", primary: false },
-          { text: "House,", primary: true },
-          { text: "Shop,", primary: true },
-          { text: "or", primary: true },
-          { text: "Office", primary: true },
-          { text: "with", primary: false },
-          { text: "our", primary: false },
-          { text: "complete", primary: false },
-          { text: "Renovation,", primary: true },
-          { text: "Electrical,", primary: true },
-          { text: "and", primary: true },
-          { text: "Plumbing", primary: true },
-          { text: "Services", primary: true },
-          { text: "covering", primary: false },
-          { text: "Water", primary: true },
-          { text: "heaters,", primary: true },
-          { text: "Ceiling", primary: true },
-          { text: "fans,", primary: true },
-          { text: "Air", primary: true },
-          { text: "conditioners,", primary: true },
-          { text: "Lighting,", primary: true },
-          { text: "CCTV,", primary: true },
-          { text: "Power", primary: true },
-          { text: "Sockets,", primary: true },
-          { text: "Main", primary: true },
-          { text: "DB", primary: true },
-          { text: "Fuse", primary: true },
-          { text: "Boxes,", primary: true },
-          { text: "and a lot more!", primary: true },
-        ]}
-      /> */}
-      {/* <div className="float-right">
-        <ScrollAnimatedCog />
-      </div> */}
     </div>
   );
 };
-
-// const ScrollAnimatedCog = () => {
-//   const { scrollY } = useScroll();
-//   const rotate = useSpring(
-//     useTransform(scrollY, [0, 1000], [0, 360], { clamp: false }),
-//     { bounce: 0, duration: 1 }
-//   );
-//   const rotateAnti = useSpring(
-//     useTransform(scrollY, [0, 1000], [360, 0], {
-//       clamp: false,
-//     }),
-//     { bounce: 0, duration: 1 }
-//   );
-//   return (
-//     <div className="relative h-72 w-72">
-//       <motion.div
-//         style={{ rotate }}
-//         className="absolute w-24 h-auto top-0 right-14"
-//       >
-//         <Cog className="w-full h-full text-stone-200" />
-//       </motion.div>
-//       <motion.div
-//         style={{ rotate }}
-//         className="absolute w-36 h-auto bottom-0 right-0"
-//       >
-//         <Cog className="w-full h-full text-stone-200" />
-//       </motion.div>
-//       <motion.div
-//         style={{ rotate: rotateAnti }}
-//         className="absolute w-48 h-auto top-10 left-0"
-//       >
-//         <Cog className="w-full h-full text-stone-200" />
-//       </motion.div>
-//     </div>
-//   );
-// };
 
 const ScrollAnimatedParagraph = ({
   paragraph,
