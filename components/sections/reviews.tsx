@@ -27,7 +27,7 @@ const Reviews = () => {
           variants={motionVariants}
           initial="hidden"
           whileInView="visible"
-          className="text-xl text-lime-100 font-semibold leading-none md:text-3xl md:w-[30rem] md:mx-auto"
+          className="text-xl text-lime-950 font-semibold leading-none md:text-3xl md:w-[30rem] md:mx-auto"
         >
           WHAT OUR CUSTOMERS SAY ABOUT US
         </motion.h1>

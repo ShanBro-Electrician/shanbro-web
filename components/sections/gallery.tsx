@@ -24,7 +24,7 @@ const Gallery = () => {
         variants={motionVariants}
         initial="hidden"
         whileInView="visible"
-        className="text-xl md:text-3xl text-lime-100 font-semibold mb-2"
+        className="text-xl md:text-3xl text-lime-950 font-semibold mb-2"
       >
         GALLERY
       </motion.h1>
@@ -50,7 +50,7 @@ const Gallery = () => {
       </div>
       <Link
         href="/gallery"
-        className="rounded border-2 border-white text-white font-semibold inline-block text-center w-full p-4 mt-4 transition-colors hover:text-black hover:bg-white"
+        className="rounded border-2 border-black text-black font-semibold inline-block text-center w-full p-4 mt-4 transition-colors hover:text-white hover:bg-black"
       >
         View more photos
       </Link>

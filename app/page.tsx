@@ -11,18 +11,11 @@ export default function Home() {
     <main>
       <Hero />
       <Services />
-      <motion.div
-        className="bg-gradient-to-br from-stone-800 to-stone-900"
-        initial={{ borderTopLeftRadius: 300, borderTopRightRadius: 300 }}
-        whileInView={{ borderTopLeftRadius: 40, borderTopRightRadius: 40 }}
-        viewport={{ margin: "-80px" }}
-      >
-        <Reviews />
-        <Gallery />
-        <div className="p-4">
-          <Footer />
-        </div>
-      </motion.div>
+      <Reviews />
+      <Gallery />
+      <div className="p-4">
+        <Footer />
+      </div>
     </main>
   );
 }
