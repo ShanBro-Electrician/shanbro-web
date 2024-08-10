@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react";
 
 const Reviews = () => {
   return (
-    <div className="bg-lime-300">
+    <div className="bg-lime-200">
       <div className="container py-6 flex flex-col gap-8 items-center md:gap-16 md:flex-row md:justify-around">
         {/* Text content */}
         <motion.div
@@ -54,8 +54,8 @@ const Reviews = () => {
         </motion.div>
         {/* Reviews */}
         <div className=" h-[600px] overflow-y-hidden relative md:w-96">
-          <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-lime-300 via-lime-300 to-transparent z-10" />
-          <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-lime-300 via-lime-300 to-transparent z-10" />
+          <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-lime-200 via-lime-200 to-transparent z-10" />
+          <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-lime-200 via-lime-200 to-transparent z-10" />
           <InfiniteScroll />
         </div>
       </div>
