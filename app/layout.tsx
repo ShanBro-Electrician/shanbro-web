@@ -26,10 +26,7 @@ export default function RootLayout({
     <html lang="en">
       <GoogleTagManager gtmId="G-N3CVV05G1Z" />
       <body
-        className={cn(
-          "min-h-screen bg-gradient-to-b from-zinc-50 to-zinc-200 font-sans antialiased",
-          fontSans.variable
-        )}
+        className={cn("min-h-screen font-sans antialiased", fontSans.variable)}
       >
         <Navbar />
         {children}
