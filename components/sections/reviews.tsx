@@ -28,7 +28,7 @@ const Reviews = () => {
           </p>
           <div className="flex justify-between items-center">
             <p className="uppercase text-xs font-bold text-black/50 w-max leading-none">
-              <span className="text-3xl text-zinc-900">100+</span>
+              <span className="text-3xl text-zinc-900">500+</span>
               <br />
               <span>
                 Projects <br /> Completed
@@ -36,7 +36,7 @@ const Reviews = () => {
             </p>
             <Separator orientation="vertical" className="h-8 bg-black/30" />
             <p className="uppercase text-xs font-bold text-black/50 w-max leading-none">
-              <span className="text-3xl text-zinc-900">500+</span>
+              <span className="text-3xl text-zinc-900">100+</span>
               <br />
               <span>
                 Happy <br /> Customers
