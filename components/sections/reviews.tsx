@@ -10,7 +10,7 @@ const Reviews = () => {
       <div className="container py-6 flex flex-col gap-8 items-center md:gap-16 md:flex-row md:justify-around">
         {/* Text content */}
         <motion.div
-          className="space-y-4 md:w-[500px] md:space-y-8"
+          className="space-y-4 py-4 md:w-[500px] md:space-y-8"
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
@@ -54,8 +54,8 @@ const Reviews = () => {
         </motion.div>
         {/* Reviews */}
         <div className=" h-[600px] overflow-y-hidden relative md:w-96">
-          <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-[#c2ed77] via-[#c2ed77] to-transparent z-10" />
-          <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-[#c2ed77] via-[#c2ed77] to-transparent z-10" />
+          <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-[#c2ed77] to-transparent z-10" />
+          <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-[#c2ed77] to-transparent z-10" />
           <InfiniteScroll />
         </div>
       </div>
