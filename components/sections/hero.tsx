@@ -63,7 +63,7 @@ const Hero = () => {
         </motion.h1>
         <Separator className="sm:col-span-2 lg:col-span-3 bg-stone-100/30" />
         <div className="space-y-4">
-          <h2 className="leading-none uppercase font-semibold text-yellow-100 text-lg md:text-xl lg:text-2xl xl:text-3xl">
+          <h2 className="leading-none uppercase font-semibold text-yellow-100 text-lg md:text-xl lg:text-2xl">
             We&apos;re only one call away
           </h2>
           <div className="flex gap-2">
