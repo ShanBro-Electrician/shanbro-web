@@ -17,7 +17,7 @@ const Hero = () => {
   const contentY = useTransform(scrollYProgress, [0, 1], [0, 100]);
 
   return (
-    <div className="relative bg-zinc-950/60">
+    <div className="relative bg-zinc-950/50">
       {/* Background images */}
       <div
         ref={bgRef}
