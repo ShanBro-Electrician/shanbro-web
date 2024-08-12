@@ -93,7 +93,7 @@ const Services = () => {
             We are KL City&apos;s go-to{" "}
             <span className="bg-lime-100">Plumber and Electrician</span>!
           </h2>
-          <p className="font-medium text-zinc-500 text-base leading-relaxed antialiased">
+          <p className="text-zinc-500 text-sm leading-relaxed antialiased">
             Upgrade your house, shop, or office with our complete renovation,
             electrical, and plumbing services covering water heaters, ceiling
             fans, air conditioners, lighting, CCTV, power sockets, main db fuse
