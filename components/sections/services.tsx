@@ -30,7 +30,7 @@ const Services = () => {
   );
 
   return (
-    <div className="container py-20 space-y-16">
+    <div className="py-20 space-y-16">
       <ScrollAnimatedParagraph
         paragraph={[
           { text: "Delivering", primary: false },
@@ -40,10 +40,10 @@ const Services = () => {
           { text: "Unbeatable", primary: true },
           { text: "Prices.", primary: true },
         ]}
-        className="leading-none antialiased uppercase font-medium text-4xl md:text-5xl lg:text-6xl"
+        className="container leading-none antialiased uppercase font-medium text-4xl md:text-5xl lg:text-6xl"
       />
       <div
-        className="relative h-48 md:h-60 overflow-hidden"
+        className="relative h-48 md:h-60 overflow-hidden md:container"
         ref={servicesImagesContainer}
       >
         <motion.div
@@ -72,7 +72,7 @@ const Services = () => {
         </motion.div>
       </div>
 
-      <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:justify-center">
+      <div className="container flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:justify-center">
         {details.map((d) => (
           <div className="space-y-1 sm:w-60" key={d.title}>
             <h3 className="text-sm font-semibold text-lime-800">{d.title}</h3>
@@ -86,7 +86,7 @@ const Services = () => {
       <Separator />
       <div
         ref={klCityContainer}
-        className="flex flex-col gap-12 md:flex-row-reverse lg:px-32"
+        className="container flex flex-col gap-12 md:flex-row-reverse lg:px-32"
       >
         <div className="flex flex-col gap-12 w-full md:py-40">
           <h2 className="text-3xl font-semibold text-zinc-900">
