@@ -13,9 +13,8 @@ const Hero = () => {
     target: bgRef,
     offset: ["start start", "end start"],
   });
-  const bgY = useTransform(scrollYProgress, [0, 1], [0, 300]);
+  const bgY = useTransform(scrollYProgress, [0, 1], [0, 450]);
   const contentY = useTransform(scrollYProgress, [0, 1], [0, 100]);
-  const bgScale = useTransform(scrollYProgress, [0, 1], [1, 1.3]);
 
   return (
     <div className="relative bg-zinc-950/60">
@@ -29,7 +28,7 @@ const Hero = () => {
           style={{ opacity: scrollYProgress }}
         />
         <motion.div
-          style={{ y: bgY, scale: bgScale, transformOrigin: "bottom" }}
+          style={{ y: bgY, transformOrigin: "bottom" }}
           className="absolute w-full h-full -z-20"
         >
           <Image
