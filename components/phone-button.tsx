@@ -11,7 +11,7 @@ const PhoneButton = ({
       href="tel:+60182709026"
       target="_blank"
       className={cn(
-        "rounded-full bg-lime-200/80 text-lime-950 py-2 px-4 cursor-pointer text-xs font-semibold flex items-center gap-1",
+        "flex gap-2 items-center min-h-10 px-3 rounded-xl border-2 border-zinc-900 text-zinc-900 uppercase font-semibold",
         className
       )}
       {...rest}

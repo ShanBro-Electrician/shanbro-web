@@ -11,7 +11,7 @@ const WhatsappButton = ({
       href="https://wa.me/60182709026"
       target="_blank"
       className={cn(
-        "rounded-full bg-lime-600 text-white py-2 px-4 cursor-pointer text-xs font-semibold flex items-center gap-1",
+        "flex gap-2 items-center min-h-10 px-3 rounded-xl bg-zinc-900 text-white uppercase font-semibold",
         className
       )}
       {...rest}
@@ -19,7 +19,7 @@ const WhatsappButton = ({
       <div className="relative w-6 h-6">
         <Image src="WhatsApp.svg" alt="whatsapp logo" fill />
       </div>
-      Whatsapp
+      WhatsApp
     </a>
   );
 };
