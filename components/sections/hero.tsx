@@ -67,8 +67,8 @@ const Hero = () => {
             We&apos;re only one call away
           </h2>
           <div className="flex gap-2">
-            <WhatsappButton />
-            <PhoneButton />
+            <WhatsappButton className="bg-lime-600" />
+            <PhoneButton className="text-white border-white" />
           </div>
         </div>
         <p className="text-base text-stone-300">
