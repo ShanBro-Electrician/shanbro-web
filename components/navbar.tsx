@@ -58,8 +58,8 @@ const Navbar = () => {
         </Link>
         <Menu className="sm:hidden" onClick={() => setIsOpen(!isOpen)} />
         <div className="hidden sm:flex gap-2">
-          <WhatsappButton />
-          <PhoneButton />
+          <WhatsappButton className="bg-lime-600" />
+          <PhoneButton className={isSolid ? "" : "text-white border-white"} />
         </div>
       </div>
 
