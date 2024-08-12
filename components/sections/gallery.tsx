@@ -28,7 +28,7 @@ const Gallery = () => {
       >
         GALLERY
       </motion.h1>
-      <div className="grid gap-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <div className="grid gap-2 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
         {images.map((img) => (
           <motion.div
             viewport={{ margin: "-100px", once: true }}
@@ -36,7 +36,7 @@ const Gallery = () => {
             initial="hidden"
             whileInView="visible"
             key={img.src}
-            className="relative h-32 sm:h-48 md:h-72 lg:h-96"
+            className="relative rounded overflow-hidden h-32 sm:h-48 md:h-72 lg:h-96"
           >
             <Image
               src={img.src}
@@ -50,7 +50,7 @@ const Gallery = () => {
       </div>
       <Link
         href="/gallery"
-        className="rounded border-2 border-black text-black font-semibold inline-block text-center w-full p-4 mt-4 transition-colors hover:text-white hover:bg-black"
+        className="rounded border-2 border-zinc-900 text-zinc-900 font-semibold inline-block text-center w-full p-4 mt-4 transition-colors hover:text-white hover:bg-zinc-900"
       >
         View more photos
       </Link>
@@ -73,6 +73,23 @@ const images = [
   },
   { src: "/gallery/7.jpg", alt: "Man working on pipes." },
   { src: "/gallery/8.jpg", alt: "Working with more electrical plugs." },
+
+  {
+    src: "/gallery/IMG-20240717-WA0031.jpg",
+    alt: "Working with fan",
+  },
+  {
+    src: "/gallery/IMG-20240717-WA0032.jpg",
+    alt: "Fixing a ceiling fan.",
+  },
+  {
+    src: "/gallery/IMG-20240717-WA0037.jpg",
+    alt: "Working with more electrical plugs.",
+  },
+  {
+    src: "/gallery/IMG-20240717-WA0038.jpg",
+    alt: "Fixing leakage.",
+  },
 ];
 
 export default Gallery;
