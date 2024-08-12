@@ -40,7 +40,7 @@ const Services = () => {
           { text: "Unbeatable", primary: true },
           { text: "Prices.", primary: true },
         ]}
-        className="leading-none antialiased uppercase font-medium text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
+        className="leading-none antialiased uppercase font-medium text-4xl md:text-5xl lg:text-6xl"
       />
       <div
         className="relative h-48 md:h-60 overflow-hidden"
@@ -127,7 +127,7 @@ const ScrollAnimatedParagraph = ({
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
-    offset: ["start end", "start 0.5"],
+    offset: ["start end", "start 0.25"],
   });
 
   return (
@@ -163,7 +163,7 @@ const Word = ({
   range: number[];
   primary?: boolean;
 }) => {
-  const opacity = useTransform(progress, range, [0.15, 1]);
+  const opacity = useTransform(progress, range, [0.1, 1]);
 
   return (
     <span className={cn(primary ? "text-lime-500" : "text-zinc-950")}>
