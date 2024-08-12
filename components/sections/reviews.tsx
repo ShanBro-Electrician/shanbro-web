@@ -14,6 +14,7 @@ const Reviews = () => {
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
         >
           <div className="uppercase flex flex-col-reverse gap-1">
             <h3 className="font-bold text-zinc-900 tracking-tight leading-none text-3xl md:text-4xl">
