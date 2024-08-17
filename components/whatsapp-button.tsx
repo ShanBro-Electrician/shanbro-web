@@ -11,7 +11,7 @@ const WhatsappButton = ({
       href="https://wa.me/60182709026"
       target="_blank"
       className={cn(
-        "flex gap-2 items-center min-h-10 px-3 rounded-xl bg-zinc-900 text-white uppercase font-semibold",
+        "flex gap-2 items-center min-h-10 px-3 rounded-xl bg-zinc-900 text-white uppercase font-semibold text-sm",
         className
       )}
       {...rest}
