@@ -48,7 +48,7 @@ const Navbar = () => {
       className={cn(
         "fixed z-50 w-full transition-colors duration-500",
         isOpen || isSolid
-          ? "text-zinc-900 bg-white"
+          ? "text-zinc-900 bg-gradient-to-r from-zinc-100/90 to-zinc-100/50 backdrop-blur-xl border-b"
           : "text-zinc-100 bg-transparent"
       )}
     >
