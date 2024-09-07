@@ -24,7 +24,7 @@ const Reviews = () => {
           </div>
           <p className="text-black/80 text-sm">
             Don’t just take our word for it. Hear it from our customers. With
-            over 500 clients, and 16 years of experience, we have been providing
+            over 100 clients, and 16 years of experience, we have been providing
             quality services to loyal customers with 100% satisfaction rate.
           </p>
           <div className="flex justify-between items-center">
