@@ -8,7 +8,7 @@ const WhatsappButton = ({
 }: React.ComponentPropsWithoutRef<"a">) => {
   return (
     <a
-      href="https://wa.me/60182709026"
+      href="https://wa.me/601128079884"
       target="_blank"
       className={cn(
         "flex gap-2 items-center min-h-10 px-3 rounded-xl bg-zinc-900 text-white uppercase font-semibold text-sm",

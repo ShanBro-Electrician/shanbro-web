@@ -8,7 +8,7 @@ const PhoneButton = ({
 }: React.ComponentPropsWithoutRef<"a">) => {
   return (
     <a
-      href="tel:+60182709026"
+      href="tel:+601128079884"
       target="_blank"
       className={cn(
         "flex gap-2 items-center min-h-10 px-3 rounded-xl border-2 border-zinc-900 text-zinc-900 uppercase font-semibold text-sm",
@@ -17,7 +17,7 @@ const PhoneButton = ({
       {...rest}
     >
       {/* <Phone height={20} width={20} /> */}
-      +6018-270 9026
+      +6011 2807 9884
     </a>
   );
 };
