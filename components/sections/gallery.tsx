@@ -1,8 +1,30 @@
-import { motion, Variants } from "framer-motion";
-import Image from "next/image";
+"use client";
 import Link from "next/link";
+import Image from "next/image";
+import { useEffect, useState } from "react";
+import { motion, Variants } from "framer-motion";
 
 const Gallery = () => {
+  const [filenames, setFilenames] = useState<string[]>([]);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchFilenames = async () => {
+      try {
+        const response = await fetch("/api/files");
+        if (!response.ok) {
+          throw new Error("Failed to fetch filenames");
+        }
+        const data: string[] = await response.json();
+        setFilenames(data.slice(-24));
+      } catch (error: any) {
+        setError(error.message);
+      }
+    };
+
+    fetchFilenames();
+  }, []);
+
   const motionVariants: Variants = {
     hidden: {
       opacity: 0,
@@ -29,18 +51,18 @@ const Gallery = () => {
         GALLERY
       </motion.h1>
       <div className="grid gap-2 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
-        {images.map((img) => (
+        {filenames.map((img) => (
           <motion.div
             viewport={{ margin: "-100px", once: true }}
             variants={motionVariants}
             initial="hidden"
             whileInView="visible"
-            key={img.src}
+            key={img}
             className="relative rounded overflow-hidden h-32 sm:h-48 md:h-72 lg:h-96"
           >
             <Image
-              src={img.src}
-              alt={img.alt}
+              src={`/gallery/${img}`}
+              alt={img}
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover"
@@ -73,10 +95,9 @@ const images = [
   },
   { src: "/gallery/7.jpg", alt: "Man working on pipes." },
   { src: "/gallery/8.jpg", alt: "Working with more electrical plugs." },
-
   {
-    src: "/gallery/IMG-20240717-WA0031.jpg",
-    alt: "Working with fan",
+    src: "/gallery/IMG-20240725-WA0036.jpg",
+    alt: "Working with AC",
   },
   {
     src: "/gallery/IMG-20240717-WA0032.jpg",
