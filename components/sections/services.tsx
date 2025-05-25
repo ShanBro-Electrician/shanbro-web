@@ -30,7 +30,14 @@ const Services = () => {
   );
 
   return (
-    <div className="py-20 space-y-16">
+    <div className="py-20 space-y-16 container">
+      <Image
+        src="/poster-1.jpeg"
+        alt="Our poster"
+        className="mx-auto max-h-screen object-contain"
+        width={1080}
+        height={1453}
+      />
       <ScrollAnimatedParagraph
         paragraph={[
           { text: "Delivering", primary: false },
@@ -40,7 +47,7 @@ const Services = () => {
           { text: "Unbeatable", primary: true },
           { text: "Prices.", primary: true },
         ]}
-        className="container leading-none antialiased uppercase font-medium text-4xl md:text-5xl lg:text-6xl"
+        className="leading-none antialiased uppercase font-medium text-4xl md:text-5xl lg:text-6xl"
       />
       <div
         className="relative h-48 md:h-60 overflow-hidden md:container"
