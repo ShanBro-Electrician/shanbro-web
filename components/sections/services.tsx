@@ -26,7 +26,7 @@ const Services = () => {
   const servicesImageX = useTransform(
     scrollYProgressServicesImages,
     [0, 1],
-    [100, -100]
+    [300, -300]
   );
 
   return (
